@@ -44,16 +44,11 @@ body {
   padding-bottom: 80px; /* Extra space for toggle button */
 }
 
-/* Mobile-Friendly Adjustments */
-@media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-}
-
-/* Title */
+/* Title - Slightly Larger & Lighter */
 .title {
-  font-size: 2.8rem;
+  font-family: 'CMU Serif', serif;
+  font-size: 3rem;
+  font-weight: 300;
   text-align: center;
   margin-bottom: 5px;
 }
@@ -70,6 +65,8 @@ body {
 /* Sections */
 h2 {
   font-size: 2rem;
+  font-weight: normal;
+  font-family: 'CMU Bright Medium', serif;
   margin: 40px 0 15px;
 }
 
@@ -80,6 +77,22 @@ p {
   text-align: left;
   text-indent: 0;
   transition: color var(--transition-speed) ease;
+}
+
+/* Responsive Font Sizes for Mobile */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.5rem;
+  }
+  .subtitle {
+    font-size: 1.2rem;
+  }
+  h2 {
+    font-size: 1.7rem;
+  }
+  p {
+    font-size: 1rem;
+  }
 }
 
 /* Links */
@@ -147,19 +160,12 @@ a:hover::after {
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.15); /* More glassmorphic */
+  background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
   padding: 8px 16px;
   border-radius: 20px;
   border: 1px solid var(--card-border);
   transition: transform var(--transition-speed) ease;
-}
-
-/* Sticky Toggle for Smooth Scrolling */
-@media (max-width: 768px) {
-  .theme-switch-wrapper {
-    bottom: 20px;
-  }
 }
 
 /* Theme Switch */
@@ -208,17 +214,8 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-/* Hide Navbar on Scroll (Prevents Jumping Toggle) */
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: var(--bg-color);
-  transition: transform var(--transition-speed) ease;
-  z-index: 1000;
-}
-
-.hidden-navbar {
-  transform: translateY(-100%);
+@media (max-width: 768px) {
+  .theme-switch-wrapper {
+    bottom: 20px;
+  }
 }
