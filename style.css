@@ -18,6 +18,7 @@
   --card-bg: rgba(255, 255, 255, 0.08);
   --card-border: rgba(255, 255, 255, 0.2);
   --link-color: white;
+  --transition-speed: 0.4s;
 }
 
 /* Light Mode */
@@ -38,34 +39,14 @@ body {
   padding: 40px;
   max-width: 700px;
   margin: auto;
-  transition: background 0.3s ease, color 0.3s ease;
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+  will-change: background, color;
 }
 
 /* Mobile-Friendly Adjustments */
 @media (max-width: 768px) {
   body {
     padding: 20px;
-  }
-  
-  .title {
-    font-size: 2.2rem;
-  }
-
-  .subtitle {
-    font-size: 1.2rem;
-  }
-
-  h2 {
-    font-size: 1.8rem;
-  }
-
-  p {
-    font-size: 1.1rem;
-  }
-
-  .glass-card {
-    padding: 20px;
-    margin: 20px 0;
   }
 }
 
@@ -93,11 +74,11 @@ h2 {
 
 /* Paragraphs */
 p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-align: justify;
-  text-indent: 1.5em;
-  margin-bottom: 1em;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+  text-indent: 0;
+  transition: color var(--transition-speed) ease;
 }
 
 /* Links */
@@ -105,7 +86,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
   position: relative;
-  transition: color 0.3s ease;
+  transition: color var(--transition-speed) ease;
 }
 
 a::after {
@@ -118,7 +99,7 @@ a::after {
   background-color: var(--link-color);
   transform: scaleX(0);
   transform-origin: left;
-  transition: transform 0.3s ease;
+  transition: transform var(--transition-speed) ease;
 }
 
 a:hover {
@@ -132,42 +113,50 @@ a:hover::after {
 /* Glassmorphic Cards */
 .glass-card {
   background: var(--card-bg);
-  backdrop-filter: blur(10px);
   border-radius: 15px;
   padding: 25px;
   margin: 30px 0;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--card-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .glass-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   border-color: var(--text-color);
 }
-/* Theme Toggle: Now Fully Responsive */
+
+@media (max-width: 768px) {
+  .glass-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: none !important;
+  }
+}
+
+/* Optimized Theme Toggle */
 .theme-switch-wrapper {
   position: fixed;
-  bottom: 20px;
+  bottom: 10px;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 6px 14px;
   border-radius: 20px;
-  backdrop-filter: blur(10px);
-  z-index: 1000; /* Ensures it's above everything */
   border: 1px solid var(--card-border);
+  transition: transform var(--transition-speed) ease;
 }
 
-/* Fix Visibility on Mobile */
+/* Sticky Toggle for Smooth Scrolling */
 @media (max-width: 768px) {
   .theme-switch-wrapper {
-    bottom: 10px;
-    padding: 6px 12px;
+    bottom: 20px;
   }
 }
 
@@ -193,7 +182,7 @@ a:hover::after {
   right: 0;
   bottom: 0;
   background-color: #888;
-  transition: 0.4s;
+  transition: var(--transition-speed);
   border-radius: 20px;
 }
 
@@ -205,7 +194,7 @@ a:hover::after {
   left: 3px;
   bottom: 3px;
   background-color: white;
-  transition: 0.4s;
+  transition: var(--transition-speed);
   border-radius: 50%;
 }
 
@@ -217,60 +206,17 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
-
-/* Optimized Glass Card */
-.glass-card {
-  background: var(--card-bg);
-  border-radius: 15px;
-  padding: 25px;
-  margin: 30px 0;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Reduced for performance */
-  border: 1px solid var(--card-border);
-  transition: box-shadow 0.3s ease;
-}
-
-/* Disable Transform & Blur on Mobile */
-@media (max-width: 768px) {
-  .glass-card:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
-  
-  .glass-card {
-    background: rgba(255, 255, 255, 0.1); /* Lighter, no blur */
-    backdrop-filter: none !important;
-  }
-}
-
-/* Optimized Hover Effects for Desktop */
-.glass-card:hover {
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Optimization: Reduce Text Effects */
-p {
-  font-size: 1.1rem;
-  line-height: 1.5;
-  text-align: left;
-  text-indent: 0;
-}
-
-/* Optimization: Reduce Theme Switch Impact */
-.theme-switch-wrapper {
+/* Hide Navbar on Scroll (Prevents Jumping Toggle) */
+.navbar {
   position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  background: rgba(255, 255, 255, 0.08); /* Reduced transparency */
-  padding: 6px 14px;
-  border-radius: 20px;
-  border: 1px solid var(--card-border);
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--bg-color);
+  transition: transform var(--transition-speed) ease;
+  z-index: 1000;
 }
 
-/* Improve Theme Switching Performance */
-body {
-  will-change: background, color;
+.hidden-navbar {
+  transform: translateY(-100%);
 }
