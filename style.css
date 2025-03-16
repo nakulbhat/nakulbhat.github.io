@@ -1,12 +1,14 @@
-/* Import Computer Modern Fonts */
+/* Import Computer Modern Fonts - Optimized */
 @font-face {
   font-family: 'CMU Serif';
-  src: url('fonts/cmunrm.ttf') format('truetype');
+  src: url('fonts/cmunrm.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'CMU Serif Italic';
-  src: url('fonts/cmunti.ttf') format('truetype');
+  src: url('fonts/cmunti.woff2') format('woff2');
+  font-display: swap;
 }
 
 /* Root Variables */
@@ -216,7 +218,21 @@ input:checked + .slider:before {
 }
 
 
-/* Optimization: Reduce backdrop-filter for performance */
+
+/* General Styles Optimization */
+body {
+  font-family: 'CMU Serif', serif;
+  background: var(--bg-color);
+  color: var(--text-color);
+  text-align: left;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  transition: background 0.3s ease, color 0.3s ease;
+  will-change: background, color;
+}
+
+/* Glassmorphic Cards Optimization */
 .glass-card {
   background: var(--card-bg);
   border-radius: 15px;
@@ -262,9 +278,4 @@ p {
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid var(--card-border);
-}
-
-/* Improve theme switching performance */
-body {
-  will-change: background, color;
 }
