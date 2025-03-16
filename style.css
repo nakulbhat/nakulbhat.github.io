@@ -214,3 +214,57 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(20px);
 }
+
+
+/* Optimization: Reduce backdrop-filter for performance */
+.glass-card {
+  background: var(--card-bg);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduced for performance */
+  border: 1px solid var(--card-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Disable transform on mobile */
+@media (max-width: 768px) {
+  .glass-card:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+}
+
+/* Keep animation on larger screens */
+.glass-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Optimization: Reduce text effects */
+p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  text-align: left;
+  text-indent: 0; /* Removed unnecessary indent */
+}
+
+/* Optimization: Reduce theme-switch impact */
+.theme-switch-wrapper {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.08); /* Reduced transparency */
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid var(--card-border);
+}
+
+/* Improve theme switching performance */
+body {
+  will-change: background, color;
+}
