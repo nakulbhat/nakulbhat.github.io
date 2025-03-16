@@ -7,7 +7,7 @@
 
 @font-face {
   font-family: 'CMU Serif Italic';
-  src: url('fonts/cmunti.woff2') format('woff2');
+  src: url('fonts/cmunti.woff2');
   font-display: swap;
 }
 
@@ -138,17 +138,6 @@ a:hover::after {
 .glass-card:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   border-color: var(--text-color);
-}
-
-@media (max-width: 768px) {
-  .glass-card:hover {
-    transform: none !important;
-    box-shadow: none !important;
-  }
-  .glass-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: none !important;
-  }
 }
 
 /* Optimized Theme Toggle */
