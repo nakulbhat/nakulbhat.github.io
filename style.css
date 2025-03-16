@@ -218,54 +218,44 @@ input:checked + .slider:before {
 }
 
 
-
-/* General Styles Optimization */
-body {
-  font-family: 'CMU Serif', serif;
-  background: var(--bg-color);
-  color: var(--text-color);
-  text-align: left;
-  padding: 40px;
-  max-width: 700px;
-  margin: auto;
-  transition: background 0.3s ease, color 0.3s ease;
-  will-change: background, color;
-}
-
-/* Glassmorphic Cards Optimization */
+/* Optimized Glass Card */
 .glass-card {
   background: var(--card-bg);
   border-radius: 15px;
   padding: 25px;
   margin: 30px 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Reduced for performance */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15); /* Reduced for performance */
   border: 1px solid var(--card-border);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
-/* Disable transform on mobile */
+/* Disable Transform & Blur on Mobile */
 @media (max-width: 768px) {
   .glass-card:hover {
     transform: none !important;
     box-shadow: none !important;
   }
+  
+  .glass-card {
+    background: rgba(255, 255, 255, 0.1); /* Lighter, no blur */
+    backdrop-filter: none !important;
+  }
 }
 
-/* Keep animation on larger screens */
+/* Optimized Hover Effects for Desktop */
 .glass-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Optimization: Reduce text effects */
+/* Optimization: Reduce Text Effects */
 p {
   font-size: 1.1rem;
   line-height: 1.5;
   text-align: left;
-  text-indent: 0; /* Removed unnecessary indent */
+  text-indent: 0;
 }
 
-/* Optimization: Reduce theme-switch impact */
+/* Optimization: Reduce Theme Switch Impact */
 .theme-switch-wrapper {
   position: fixed;
   bottom: 20px;
@@ -278,4 +268,9 @@ p {
   padding: 6px 14px;
   border-radius: 20px;
   border: 1px solid var(--card-border);
+}
+
+/* Improve Theme Switching Performance */
+body {
+  will-change: background, color;
 }
