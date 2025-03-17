@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakul Bhat | Publications</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-text">Toggle Theme</span>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Publications</h1>
+            <p class="subtitle">Research Contributions by Nakul Bhat</p>
+        </header>
+
+        <main>
+            <section id="publications" class="glass-card fade-in">
+                <h2>My Research Papers</h2>
+                
+                <div class="publication">
+                    <img src="publications/aimbv.jpg" alt="First Page of Publication 1">
+                    <div class="publication-details">
+                        <h3>A Review of AI Tools in Molecular Biology and Virology</h3>
+                        <p> Bhat, P. N., Balaji, S., & Shapshak, P. (2025)</p>
+                        <a href="publications/aimbv.pdf" target="_blank">Read Full Paper</a>
+                    </div>
+                </div>
+            
+                <div class="publication">
+                    <img src="publications/esgpatent.jpg" alt="First Page of Publication 2">
+                    <div class="publication-details">
+                        <h3>Iterative Imputation System and Method for Predicting Missing Environmental, Social, and Governance (ESG) Data</h3>
+                        <p>Bhat, P. N<br>Contributors: Lopez, A., Huang, D., & Sahni, S.</p>
+                        <a href="publications/esgpatent.pdf" target="_blank">Read Complete Specifications</a>
+                    </div>
+                </div>
+            
+            </section>
+        </main>
+
+        <footer>
+            <p>© 2025 Nakul Bhat | Research & Discovery</p>
+            <a href="index.html" class="back-link">⬅ Back to Portfolio</a>
+        </footer>
+    </div>
+
+    <script>
+        const toggleSwitch = document.getElementById('theme-toggle');
+        toggleSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    </script>
+</body>
+</html>
