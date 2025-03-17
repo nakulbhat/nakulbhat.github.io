@@ -1,7 +1,7 @@
 /* Import Google Fonts - Playfair Display */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
 
-/* Import Computer Modern Fonts */
+/* Import Computer Modern Fonts - Optimized */
 @font-face {
   font-family: 'CMU Serif';
   src: url('fonts/cmunrm.woff2') format('woff2');
@@ -38,17 +38,19 @@ body {
   font-family: 'CMU Serif', serif;
   background: var(--bg-color);
   color: var(--text-color);
+  text-align: left;
+  padding: 40px;
   max-width: 700px;
   margin: auto;
-  padding: 40px 20px 80px;
-  transition: background var(--transition-speed), color var(--transition-speed);
+  transition: background var(--transition-speed) ease, color var(--transition-speed) ease;
+  will-change: background, color;
+  padding-bottom: 80px; /* Extra space for toggle button */
+  box-sizing: border-box; /* Ensure padding doesn't affect layout width */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
-  line-height: 1.4;
 }
 
-/* Typography */
+/* Title - Playfair Display */
 .title {
   font-family: 'Playfair Display', serif;
   font-size: 3rem;
@@ -57,6 +59,7 @@ body {
   margin-bottom: 5px;
 }
 
+/* Subtitle */
 .subtitle {
   font-family: 'CMU Serif Italic', serif;
   font-size: 1.4rem;
@@ -65,19 +68,61 @@ body {
   margin-bottom: 30px;
 }
 
+/* Sections - Playfair Display */
 h2 {
   font-size: 2rem;
   font-weight: 500;
   font-family: 'Playfair Display', serif;
   margin: 40px 0 15px;
-  letter-spacing: 1px;
 }
 
+/* Paragraphs */
 p {
   font-size: 1.1rem;
   line-height: 1.5;
-  letter-spacing: 0.5px;
-  transition: color var(--transition-speed);
+  text-align: left;
+  text-indent: 0;
+  transition: color var(--transition-speed) ease;
+}
+
+/* Responsive Font Sizes for Mobile */
+@media (max-width: 768px) {
+  body {
+    padding: 20px; /* Reduced padding for smaller screens */
+  }
+  
+  .title {
+    font-size: 2.5rem; /* Smaller font size for titles on mobile */
+  }
+  
+  .subtitle {
+    font-size: 1.2rem; /* Adjust subtitle font size */
+  }
+  
+  h2 {
+    font-size: 1.7rem;
+    text-align: center;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+  
+  .glass-card {
+    padding: 15px; /* Reduce padding inside cards on mobile */
+    margin: 15px 0; /* Reduced margin for better spacing */
+  }
+
+  .theme-switch-wrapper {
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px; /* Reduced padding for mobile */
+  }
+
+  .theme-switch-wrapper:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Hover effect for theme switch */
+  }
 }
 
 /* Links */
@@ -85,7 +130,7 @@ a {
   color: var(--link-color);
   text-decoration: none;
   position: relative;
-  transition: color var(--transition-speed);
+  transition: color var(--transition-speed) ease;
 }
 
 a::after {
@@ -97,7 +142,8 @@ a::after {
   height: 1px;
   background-color: var(--link-color);
   transform: scaleX(0);
-  transition: transform var(--transition-speed);
+  transform-origin: left;
+  transition: transform var(--transition-speed) ease;
 }
 
 a:hover {
@@ -116,7 +162,7 @@ a:hover::after {
   margin: 30px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
   border: 1px solid var(--card-border);
-  transition: box-shadow var(--transition-speed), border-color var(--transition-speed);
+  transition: box-shadow var(--transition-speed) ease, border-color var(--transition-speed) ease;
 }
 
 .glass-card:hover {
@@ -124,25 +170,26 @@ a:hover::after {
   border-color: var(--text-color);
 }
 
-/* Theme Switch */
-/* Theme Switch Wrapper */
+/* Optimized Theme Toggle */
 .theme-switch-wrapper {
   position: fixed;
   bottom: 20px;
   right: 20px;
+  left: auto;
+  transform: none;
   display: flex;
   align-items: center;
   gap: 10px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(8px);
+  background: rgba(255, 255, 255, 0.1); /* Softer background */
+  backdrop-filter: blur(8px);  /* Slight blur for an elegant glass effect */
   padding: 8px 16px;
   border-radius: 20px;
   border: 1px solid var(--card-border);
-  transition: background-color 0.3s ease;
+  transition: transform var(--transition-speed) ease, background-color 0.3s ease;
 }
 
 .theme-switch-wrapper:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(255, 255, 255, 0.2);  /* Subtle hover effect */
 }
 
 /* Theme Switch */
@@ -191,24 +238,52 @@ input:checked + .slider:before {
   transform: translateX(20px);
 }
 
+@media (max-width: 768px) {
+  .theme-switch-wrapper {
+    bottom: 20px;
+  }
+}
+body {
+  line-height: 1.4; /* Slightly better line height for readability */
+}
 
+h2 {
+  letter-spacing: 1px;
+}
 
-/* About Section */
+p {
+  letter-spacing: 0.5px;
+}
+
+/* About Me section styles */
 #about {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 20px;
-  padding: 20px;
+  flex-direction: column; /* Stack image and content vertically */
+  align-items: center; /* Center the items horizontally */
+  text-align: center; /* Ensure the content is centered */
+  gap: 20px; /* Space between image and content */
+  padding: 20px; /* Optional padding to ensure the content doesn’t touch edges */
 }
 
 #about img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid var(--card-border);
+  width: 150px; /* Size of the image */
+  height: 150px; /* Make sure it's a square */
+  border-radius: 50%; /* Make it a circle */
+  object-fit: cover; /* Ensures the image doesn't get distorted */
+  border: 4px solid var(--card-border); /* Optional border for the image */
+}
+
+/* Adjustments for mobile */
+@media (max-width: 768px) {
+  #about {
+    padding: 20px; /* Padding for mobile */
+  }
+
+  #about img {
+    width: 120px; /* Smaller size for mobile */
+    height: 120px;
+    margin-bottom: 15px; /* Space between image and content */
+  }
 }
 
 /* Publications Section */
@@ -218,6 +293,7 @@ input:checked + .slider:before {
   gap: 25px;
 }
 
+/* Individual Publication */
 .publication {
   display: flex;
   align-items: center;
@@ -233,6 +309,7 @@ input:checked + .slider:before {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* Publication Image */
 .publication img {
   width: 120px;
   height: auto;
@@ -240,40 +317,77 @@ input:checked + .slider:before {
   border: 2px solid var(--card-border);
 }
 
-/* Responsive Design */
+/* Publication Details */
+.publication-details {
+  flex: 1;
+}
+
+.publication-details h3 {
+  font-size: 1.4rem;
+  margin-bottom: 5px;
+}
+
+.publication-details p {
+  font-size: 1rem;
+  margin-bottom: 10px;
+}
+
+.publication-details a {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--link-color);
+  text-decoration: none;
+  transition: color var(--transition-speed);
+}
+
+.publication-details a:hover {
+  color: var(--text-color);
+}
+
+/* Mobile Optimization */
 @media (max-width: 768px) {
-  body {
-    padding: 20px;
-  }
-  .title {
-    font-size: 2.5rem;
-  }
-  .subtitle {
-    font-size: 1.2rem;
-  }
-  h2 {
-    font-size: 1.7rem;
-    text-align: center;
-  }
-  p {
-    font-size: 1rem;
-  }
-  .glass-card {
-    padding: 15px;
-    margin: 15px 0;
-  }
-  .theme-switch-wrapper {
-    bottom: 20px;
-  }
-  #about img {
-    width: 120px;
-    height: 120px;
-  }
   .publication {
-    flex-direction: column;
-    text-align: center;
+      flex-direction: column;
+      text-align: center;
   }
+
   .publication img {
-    width: 100px;
+      width: 100px;
   }
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: var(--card-bg);
+  color: var(--link-color);
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background var(--transition-speed), transform 0.2s, color var(--transition-speed);
+  text-decoration: none;
+  position: relative;
+}
+
+/* Remove underline effect specifically for .back-link */
+.back-link::after {
+  content: none !important;
+}
+
+.back-link:hover {
+  background: var(--card-border);
+  transform: scale(1.05);
+  text-decoration: none;
+}
+
+/* If the back-link contains an <a> element */
+.back-link a {
+  text-decoration: none !important;
+  color: inherit;
+  position: relative;
+}
+
+/* Prevent the hover underline effect */
+.back-link a::after {
+  content: none !important;
 }

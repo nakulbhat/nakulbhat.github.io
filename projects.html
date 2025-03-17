@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nakul Bhat | Projects</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="theme-switch-wrapper">
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+        <span class="toggle-text">Toggle Theme</span>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1 class="title">Projects</h1>
+            <p class="subtitle">A collection of my research and development work</p>
+        </header>
+
+        <main>
+            <section id="projects" class="glass-card fade-in">
+                <div class="project">
+                    <h3>📜 Research Paper</h3>
+                    <p>A deep dive into number theory, typeset beautifully in LaTeX.</p>
+                    <a href="#">Read More</a>
+                </div>
+                <div class="project glass-card">
+                    <h3>📘 LaTeX Templates</h3>
+                    <p>A collection of high-quality LaTeX templates for research papers and presentations.</p>
+                    <a href="#">View Templates</a>
+                </div>
+                <div class="project glass-card">
+                    <h3>🧠 AI & Machine Learning</h3>
+                    <p>Exploring AI models and their applications in scientific research.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                <div class="project glass-card">
+                    <h3>📊 Data Analysis</h3>
+                    <p>Insights derived from large datasets using Python and statistical tools.</p>
+                    <a href="#">View Project</a>
+                </div>
+            </section>
+
+        </main>
+        <footer>
+            <p>© 2025 Nakul Bhat | Research & Discovery</p>
+            <a href="index.html" class="back-link">Back to Portfolio</a>
+        </footer>
+    </div>
+
+    <script>
+        const toggleSwitch = document.getElementById('theme-toggle');
+        toggleSwitch.addEventListener('change', () => {
+            document.body.classList.toggle('light-mode');
+        });
+    </script>
+</body>
+</html>
