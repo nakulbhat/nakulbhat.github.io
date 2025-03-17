@@ -10,10 +10,14 @@
 
 @font-face {
   font-family: 'CMU Serif Italic';
-  src: url('fonts/cmunti.woff2');
+  src: url('fonts/cmunti.woff2') format('woff2');
   font-display: swap;
 }
-
+@font-face {
+  font-family: 'CMU Serif Slanted';
+  src: url('fonts/cmunsl.woff2') format('woff2');
+  font-display: swap;
+}
 /* Root Variables */
 :root {
   --bg-color: #1e1e1e;
@@ -390,4 +394,23 @@ p {
 /* Prevent the hover underline effect */
 .back-link a::after {
   content: none !important;
+}
+
+.journalOrPlace{
+  font-family: 'CMU Serif Slanted', serif;
+  margin-bottom: 1em;
+  margin-top: 0em;
+}
+
+.project-title{
+  font-size: 1.75em;
+  font-family: 'Playfair Display';
+  margin-bottom: 0.3em;
+}
+
+.authors{
+  font-size: 1.25em;
+  font-weight: 400;
+  margin-bottom: 0.1em;
+  margin-top: 0.1em;
 }
