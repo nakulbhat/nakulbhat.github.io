@@ -1,23 +1,8 @@
-/* Import Google Fonts - Playfair Display */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap');
+/* Import Google Fonts - Playfair Display and Old Standard TT */
+@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/* Import Computer Modern Fonts - Optimized */
-@font-face {
-  font-family: 'CMU Serif';
-  src: url('fonts/cmunrm.woff2') format('woff2');
-  font-display: swap;
-}
 
-@font-face {
-  font-family: 'CMU Serif Italic';
-  src: url('fonts/cmunti.woff2') format('woff2');
-  font-display: swap;
-}
-@font-face {
-  font-family: 'CMU Serif Slanted';
-  src: url('fonts/cmunsl.woff2') format('woff2');
-  font-display: swap;
-}
+
 /* Root Variables */
 :root {
   --bg-color: #1e1e1e;
@@ -39,7 +24,7 @@
 
 /* General Styles */
 body {
-  font-family: 'CMU Serif', serif;
+  font-family: 'Old Standard TT', serif;
   background: var(--bg-color);
   color: var(--text-color);
   text-align: left;
@@ -65,7 +50,8 @@ body {
 
 /* Subtitle */
 .subtitle {
-  font-family: 'CMU Serif Italic', serif;
+  font-family: 'Old Standard TT', serif;
+    font-style: italic;
   font-size: 1.4rem;
   text-align: center;
   opacity: 0.8;
@@ -327,7 +313,8 @@ p {
 }
 
 .publication-details h3 {
-  font-size: 1.4rem;
+  font-size: 1.7rem;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
@@ -397,7 +384,8 @@ p {
 }
 
 .journalOrPlace{
-  font-family: 'CMU Serif Slanted', serif;
+  font-family: 'Old Standard TT', serif;
+    font-style: italic;
   margin-bottom: 1em;
   margin-top: 0em;
 }
