@@ -1,0 +1,28 @@
+baseURL = 'https://nakulbhat.github.io/'
+theme = "HugoTex"
+title = 'Site Title'
+
+DefaultContentLanguage = "en"
+languageCode = 'en-us'
+
+enableInlineShortcodes = true
+
+
+[pagination]
+  pagerSize = 3
+
+[Params.author]
+  name = "Nakul Bhat"
+  abstract = """some filler abstract"""
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+  series = "series"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+  [markup.highlight]
+    style = "paraiso-dark"
