@@ -13,7 +13,9 @@ enableInlineShortcodes = true
 
 [Params.author]
   name = "Nakul Bhat"
-  abstract = """some filler abstract"""
+  abstract = """During the compilation of a document, LaTeX produces several .aux files containing the content of a document being typeset.
+This website is written along similar lines, showcasing some my works-in-progress.
+I study [link](google.com)"""
 
 [taxonomies]
   category = "categories"
