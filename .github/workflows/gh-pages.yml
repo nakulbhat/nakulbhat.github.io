@@ -1,45 +1,34 @@
-name: Deploy Hugo Site to GitHub Pages
+name: GitHub Pages Workflow
 
 on:
   push:
     branches:
-      - master
-  workflow_dispatch:
+      - main  # Set a branch to deploy
+  pull_request:
 
 jobs:
   deploy:
     runs-on: ubuntu-22.04
-    env:
-      HUGO_CACHEDIR: /tmp/hugo_cache
-
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
-          submodules: true
-          fetch-depth: 0
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
 
-      - name: Set up Hugo
+      - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
-          hugo-version: "latest"
-          extended: true
+          hugo-version: 'latest'
+          # extended: true
 
-      - name: Cache Hugo modules
-        uses: actions/cache@v4
-        with:
-          path: ${{ env.HUGO_CACHEDIR }}
-          key: ${{ runner.os }}-hugomod-${{ hashFiles('**/go.sum') }}
-          restore-keys: |
-            ${{ runner.os }}-hugomod
-
-      - name: Build Hugo site
+      - name: Build
         run: hugo --minify
 
-      - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          publish_branch: gh-pages
-          force_orphan: true
