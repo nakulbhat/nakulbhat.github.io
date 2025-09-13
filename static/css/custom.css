@@ -1,12 +1,26 @@
 /* Container holds the negative margins to offset the children's margins */
 .link-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: -10px; /* Adjust this value to half of the desired gap */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: -10px; /* Adjust this value to half of the desired gap */
 }
 
 /* Children have padding for the gap */
 .link-container a {
-  margin: 30px; /* This is the actual gap between items */
+        margin: 30px; /* This is the actual gap between items */
+}
+
+a {
+        color: var(--body-color);
+        text-decoration: underline;
+        text-decoration-style: dotted;
+}
+
+a:hover {
+        color: var(--body-color);
+}
+
+a:visited {
+        color: var(--body-color);
 }
