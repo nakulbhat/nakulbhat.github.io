@@ -1,0 +1,12 @@
+/* Container holds the negative margins to offset the children's margins */
+.link-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: -10px; /* Adjust this value to half of the desired gap */
+}
+
+/* Children have padding for the gap */
+.link-container a {
+  margin: 30px; /* This is the actual gap between items */
+}
