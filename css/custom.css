@@ -1,20 +1,24 @@
-/* Container holds the negative margins to offset the children's margins */
 .link-container {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin: -10px; /* Adjust this value to half of the desired gap */
+        flex-wrap: wrap; /* Allows items to wrap to a new line */
+        justify-content: center; /* Centers the items horizontally */
+        gap: 5px;
 }
 
-/* Children have padding for the gap */
-.link-container a {
-        margin: 30px; /* This is the actual gap between items */
+/* For small screens (e.g., mobile) */
+@media (max-width: 576px) {
+        .link-container {
+                flex-direction: column; /* Stacks the links vertically */
+                align-items: center; /* Centers items in the vertical stack */
+        }
 }
+
 
 a {
         color: var(--body-color);
         text-decoration: underline;
         text-decoration-style: dotted;
+        text-decoration-thickness: 2px;
 }
 
 a:hover {
