@@ -11,38 +11,38 @@
 {{ $title := $.Scratch.Get "title" }}
 {{ if $title }}
 <header>
-        {{ partial "nav.html" . }}
-        <div class="intro-header" data-aos='fade-up' data-aos-duration='1000' data-aos-easing='ease-out'>
-                <div class="container">
-                        <div class="{{ .Type }}-heading">
-                                {{ if eq .Type "list" }}
-                                <h1>{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
-                                {{ else }}
-                                <h1>{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
-                                {{ if .IsHome }}
-                                <p class="author">{{ with .Site.Params.Author.name }}{{.}}{{ else }}<br/>{{ end }}</p>
+    {{ partial "nav.html" . }}
+    <div class="intro-header">
+        <div class="container">
+            <div class="{{ .Type }}-heading">
+                {{ if eq .Type "list" }}
+                <h1 data-aos="fade-up" data-aos-duration="1000">{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+                {{ else }}
+                <h1 data-aos="fade-up" data-aos-duration="1000">{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+                {{ if .IsHome }}
+                <p class="author" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">{{ with .Site.Params.Author.name }}{{.}}{{ else }}<br/>{{ end }}</p>
 
-                                {{ if .Site.Params.Author.abstract }}
-                                <div class="abstract">
-                                        <h5>Abstract</h5>
-                                        <p>
-                                                During the compilation of a <span class="latex">L<span>a</span>T<span>e</span>X</span> document, several .aux files are produced, each containing information about
-                                                the typesetting of the document. This website is written in a similar style, and has information about my projects,
-                                                both ongoing and completed. 
-                                        </p>
-                                        <p>
-                                                <a href="{{ "tags/projects/" | absURL }}">Projects</a> &nbsp; &nbsp; &nbsp;
-                                                <a href="{{ "tags/publications/" | absURL }}">Publications</a> &nbsp; &nbsp; &nbsp;
-                                                <a href="{{ "tags/patents/" | absURL }}">Patents</a> &nbsp; &nbsp; &nbsp;
-                                                <a href="{{ "about/" | absURL }}">About Me</a>
-                                        </p>
-                                </div>
-                                {{ end }}
-                                {{ end }}
-                                {{ end }}
-                        </div>
+                {{ if .Site.Params.Author.abstract }}
+                <div class="abstract" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h5>Abstract</h5>
+                    <p>
+                        During the compilation of a <span class="latex">L<span>a</span>T<span>e</span>X</span> document, several .aux files are produced, each containing information about
+                        the typesetting of the document. This website is written in a similar style, and has information about my projects,
+                        both ongoing and completed. 
+                    </p>
+                    <p>
+                        <a data-aos='fade-right' data-aos-duration='1000' data-aos-easing='ease-out' data-aos-delay='600' href="{{ "tags/projects/" | absURL }}">Projects</a> &nbsp; &nbsp; &nbsp;
+                        <a data-aos='fade-right' data-aos-duration='1000' data-aos-easing='ease-out' data-aos-delay='700' href="{{ "tags/publications/" | absURL }}">Publications</a> &nbsp; &nbsp; &nbsp;
+                        <a data-aos='fade-right' data-aos-duration='1000' data-aos-easing='ease-out' data-aos-delay='800' href="{{ "tags/patents/" | absURL }}">Patents</a> &nbsp; &nbsp; &nbsp;
+                        <a data-aos='fade-right' data-aos-duration='1000' data-aos-easing='ease-out' data-aos-delay='900' href="{{ "about/" | absURL }}">About Me</a>
+                    </p>
                 </div>
+                {{ end }}
+                {{ end }}
+                {{ end }}
+            </div>
         </div>
+    </div>
 </header>
 {{ else }}
 <div class="intro-header"></div>
