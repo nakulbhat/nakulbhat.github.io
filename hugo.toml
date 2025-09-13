@@ -28,3 +28,5 @@ I study [link](google.com)"""
       unsafe = true
   [markup.highlight]
     style = "paraiso-dark"
+[Params]
+  lightmode = true

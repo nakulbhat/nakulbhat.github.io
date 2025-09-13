@@ -2,11 +2,14 @@
 <html lang="{{ .Site.LanguageCode }}">
     {{- partial "head.html" . -}}
     {{- if site.Params.darkmode -}}
-    <body class="latex-dark libertinus">
+    <body class="latex-dark ">
+    <!-- <body class="latex-dark libertinus"> -->
     {{- else if site.Params.lightmode -}}
-    <body class="libertinus">
+    <body class="">
+    <!-- <body class="libertinus"> -->
     {{- else -}}
-    <body class="latex-dark-auto libertinus">
+    <body class="latex-dark-auto ">
+    <!-- <body class="latex-dark-auto libertinus"> -->
     {{- end -}}
         {{- partial "header.html" . -}}
         <div id="content">
