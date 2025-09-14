@@ -16,61 +16,42 @@
                 <div class="container">
                         <div class="{{ .Type }}-heading">
                                 {{ if eq .Type "list" }}
-                                <h1 data-aos='fade-up' data-aos-once='true' data-aos-duration="1000">{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
+                                <h1 >{{ if .Data.Singular }}#{{ end }}{{ .Title }}</h1>
                                 {{ else }}
-                                <h1 data-aos='fade-up' data-aos-once='true' data-aos-duration="1000">{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
+                                <h1 >{{ with $title }}{{.}}{{ else }}<br/>{{ end }}</h1>
                                 {{ if .IsHome }}
-                                <p class="author" data-aos='fade-up' data-aos-once='true' data-aos-duration="1000" data-aos-delay="200">{{ with .Site.Params.Author.name }}{{.}}{{ else }}<br/>{{ end }}</p>
-
+                                <p class="author" >{{ with .Site.Params.Author.name }}{{.}}{{ else }}<br/>{{ end }}</p>
+                                <p class="social-links">
+                                        <a href="#" aria-label="Projects">
+                                                <i class="fas fa-folder-open"></i>
+                                        </a>
+                                        <a href="https://github.com/your-username" aria-label="GitHub">
+                                                <i class="fab fa-github"></i>
+                                        </a>
+                                        <a href="#" aria-label="Publications">
+                                                <i class="fas fa-book"></i>
+                                        </a>
+                                        <a href="https://linkedin.com/in/your-username" aria-label="LinkedIn">
+                                                <i class="fab fa-linkedin"></i>
+                                        </a>
+                                        <a href="https://orcid.org/your-orcid-id" aria-label="ORCID">
+                                                <i class="ai ai-orcid"></i>
+                                        </a>
+                                        <a href="https://scholar.google.com/citations?user=your-user-id" aria-label="Google Scholar">
+                                                <i class="ai ai-google-scholar-square"></i>
+                                        </a>
+                                        <a href="mailto:your.email@example.com" aria-label="Email">
+                                                <i class="fas fa-envelope"></i>
+                                        </a>
+                                </p>
                                 {{ if .Site.Params.Author.abstract }}
-                                <div class="abstract" data-aos='fade-up' data-aos-once='true' data-aos-duration="1000" data-aos-delay="400">
+                                <div class="abstract" >
                                         <h5>Abstract</h5>
                                         <p>
                                                 During the compilation of a <span class="latex">L<span>a</span>T<span>e</span>X</span> document, several .aux files are produced, each containing information about
                                                 the typesetting of the document. This website is written in a similar style, and has information about my projects,
                                                 both ongoing and completed. 
                                         </p>
-                                        <h5>What I Do</h5>
-                                        <div class='link-container'>                                                        <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='800' href="{{ "tags/projects/" | absURL }}">
-                                                <i class="fas fa-folder-open"></i> Projects
-                                        </a>
-                                                &nbsp; &nbsp; &nbsp;
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='900' href="{{ "tags/publications/" | absURL }}">
-                                                        <i class="fas fa-book"></i> Publications
-                                                </a>
-                                                &nbsp; &nbsp; &nbsp;
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='1000' href="{{ "tags/patents/" | absURL }}">
-                                                        <i class="fas fa-file-signature"></i> Patents
-                                                </a>
-                                                &nbsp; &nbsp; &nbsp;
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='1100' href="{{ "about/" | absURL }}">
-                                                        <i class="fas fa-user-circle"></i> About Me
-                                                </a>
-                                        </div>
-                                        <h5>Scholarly Profiles</h5>
-                                        <div class='link-container'>
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='800' href="your_google_scholar_url">
-                                                        <i class="ai ai-google-scholar-square"></i> Google Scholar
-                                                </a>
-                                                &nbsp; &nbsp; &nbsp;
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='900' href="your_github_url">
-                                                        <i class="fab fa-github-square"></i> Github
-                                                </a>
-                                                &nbsp; &nbsp; &nbsp;
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='1000' href="your_orcid_url">
-                                                        <i class="ai ai-orcid-square"></i> ORCID
-                                                </a>
-                                        </div>
-                                        <h5>Contact Me</h5>
-                                        <div class='link-container'>
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='800' href="mailto:your_email@example.com">
-                                                        <i class="fas fa-envelope-square"></i> Email
-                                                </a>
-                                                &nbsp; &nbsp; &nbsp;
-                                                <a data-aos-once='true' data-aos='fade-up' data-aos-duration='1200' data-aos-easing='ease-out-quad' data-aos-delay='900' href="your_linkedin_url">
-                                                        <i class="fab fa-linkedin"></i> LinkedIn
-                                                </a>
-                                        </div>                                       
                                 </div>
                                 {{ end }}
                                 {{ end }}

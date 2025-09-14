@@ -3,22 +3,15 @@
     {{- partial "head.html" . -}}
     {{- if site.Params.darkmode -}}
     <body class="latex-dark ">
-    <!-- <body class="latex-dark libertinus"> -->
     {{- else if site.Params.lightmode -}}
     <body class="">
-    <!-- <body class="libertinus"> -->
     {{- else -}}
     <body class="latex-dark-auto ">
-    <!-- <body class="latex-dark-auto libertinus"> -->
     {{- end -}}
         {{- partial "header.html" . -}}
         <div id="content">
         {{- block "main" . }}{{- end }}
         </div>
         {{- partial "footer.html" . -}}
-        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-        <script>
-  AOS.init();
-</script>
     </body>
 </html>

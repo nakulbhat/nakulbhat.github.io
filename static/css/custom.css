@@ -1,30 +1,9 @@
-.link-container {
-        display: flex;
-        flex-wrap: wrap; /* Allows items to wrap to a new line */
-        justify-content: center; /* Centers the items horizontally */
-        gap: 5px;
+.social-links {
+  font-size: 2rem;
+  text-align: center; /* This centers the links horizontally */
+  text-decoration: none;
 }
 
-/* For small screens (e.g., mobile) */
-@media (max-width: 576px) {
-        .link-container {
-                flex-direction: column; /* Stacks the links vertically */
-                align-items: center; /* Centers items in the vertical stack */
-        }
-}
-
-
-a {
-        color: var(--body-color);
-        text-decoration: underline;
-        text-decoration-style: dotted;
-        text-decoration-thickness: 2px;
-}
-
-a:hover {
-        color: var(--body-color);
-}
-
-a:visited {
-        color: var(--body-color);
+.social-links a {
+  text-decoration: none;
 }
