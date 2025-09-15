@@ -1,5 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap');
-
+body{
+        font-size: 18px;
+        max-width: 66ch;
+}
 .social-links {
         font-size: 2rem;
         text-align: center; /* This centers the links horizontally */

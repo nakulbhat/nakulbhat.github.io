@@ -29,4 +29,4 @@ I study [link](google.com)"""
   [markup.highlight]
     style = "paraiso-dark"
 [Params]
-  lightmode = true
+  # lightmode = true
