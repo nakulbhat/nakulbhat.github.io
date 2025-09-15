@@ -1,6 +1,6 @@
 baseURL = 'https://nakulbhat.github.io/'
 theme = "HugoTex"
-title = 'The .aux Archive'
+title = 'The aux Archive'
 
 DefaultContentLanguage = "en"
 languageCode = 'en-us'

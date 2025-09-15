@@ -1,9 +1,13 @@
 <head>
 <meta charset="utf-8" />
-{{ if .Title }}
-  <title>{{ .Title }} - {{ .Site.Title }}</title>
+{{ if .IsHome }}
+        <title>Nakul Bhat's Portfolio - {{ .Title }}</title>
 {{ else }}
-  <title>{{ .Site.Title }}</title>
+  {{ if .Title }}
+    <title>{{ .Title }} - {{ .Site.Title }}</title>
+  {{ else }}
+    <title>{{ .Site.Title }}</title>
+  {{ end }}
 {{ end }}
 {{ with .Site.Params.description }}
   <meta name="description" content="{{ . }}" />
