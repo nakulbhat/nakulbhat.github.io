@@ -1,1 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The aux Archive</title><link>https://nakulbhat.github.io/</link><description>Recent content on The aux Archive</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 04 Sep 2025 10:25:15 +0530</lastBuildDate><atom:link href="https://nakulbhat.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Genetic Sequence Ambiguity Analyzer</title><link>https://nakulbhat.github.io/posts/gene-ambiguity-counter/</link><pubDate>Thu, 04 Sep 2025 10:25:15 +0530</pubDate><guid>https://nakulbhat.github.io/posts/gene-ambiguity-counter/</guid><description>A simple project to quantify the ambiguity in COVID-19 gene sequences.</description></item><item><title>Padavinangady Nakul Bhat</title><link>https://nakulbhat.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/about/</guid><description>&lt;p&gt;Testing some stuff&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>The aux Archive</title><link>https://nakulbhat.github.io/</link><description>Recent content on The aux Archive</description><generator>Hugo</generator><language>en-us</language><lastBuildDate>Thu, 04 Sep 2025 10:25:15 +0530</lastBuildDate><atom:link href="https://nakulbhat.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>Genetic Sequence Ambiguity Analyzer</title><link>https://nakulbhat.github.io/posts/gene-ambiguity-counter/</link><pubDate>Thu, 04 Sep 2025 10:25:15 +0530</pubDate><guid>https://nakulbhat.github.io/posts/gene-ambiguity-counter/</guid><description>A simple project to quantify the ambiguity in COVID-19 gene sequences.</description></item><item><title>Padavinangady Nakul Bhat</title><link>https://nakulbhat.github.io/about/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/about/</guid><description>&lt;style&gt;
+.hero-pic {
+ width: 50%;
+ height: auto;
+ display: block;
+ margin-left: auto;
+ margin-right: auto;
+ margin-top: -1.5rem;
+ margin-bottom: 1.5rem;
+ border-radius: 8px;
+}
+@media (min-width: 768px) {
+ .hero-pic {
+ width: 25%;
+ }
+}
+&lt;/style&gt;
+&lt;img src="https://nakulbhat.github.io/assets/profilePhoto.jpg" alt="Nakul Bhat" class='hero-pic' /&gt;
+Hi There, I'm Nakul, a bioinformatics researcher who really, really loves typesetting.</description></item></channel></rss>
