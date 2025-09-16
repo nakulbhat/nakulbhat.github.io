@@ -1,5 +1,4 @@
 +++
-title = 'Padavinangady Nakul Bhat'
 +++
 <style>
 .hero-pic {
@@ -8,7 +7,7 @@ title = 'Padavinangady Nakul Bhat'
     display: block;
     margin-left: auto;
     margin-right: auto;
-    margin-top: -1.5rem;
+    /* margin-top: -1.5rem; */
     margin-bottom: 1.5rem;
     border-radius: 8px;
 }
@@ -17,7 +16,13 @@ title = 'Padavinangady Nakul Bhat'
         width: 25%;
     }
 }
+h1{
+    text-align: center;
+}
 </style>
+
+
+# Padavinangady Nakul Bhat
 
 <img src="/assets/profilePhoto.jpg" alt="Nakul Bhat" class='hero-pic' />
 Hi There, I'm Nakul, a bioinformatics researcher who really, really loves typesetting.
