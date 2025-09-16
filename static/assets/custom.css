@@ -1,6 +1,8 @@
-body{
-        font-size: 18px;
-        max-width: 66ch;
+@media screen and (min-width: 768px) {
+        body{
+                font-size: 20px;
+                max-width: 70ch;
+        }
 }
 .social-links {
         font-size: 2rem;
