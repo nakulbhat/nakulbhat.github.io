@@ -23,7 +23,7 @@ This method involves analyzing ambiguity bases (e.g., N, B, H) and their frequen
 The project is ongoing and collaborations are welcome. Further details are available upon request. Please see my contact page for more details. <!--TODO-->
 
 
-### What I’ve Learnt
+## What I’ve Learnt
 
 This project was my initial exposure to bioinformatics and Python programming. It helped me build essential skills such as data preprocessing, feature extraction, and pattern recognition.
 
