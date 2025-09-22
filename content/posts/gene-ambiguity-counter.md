@@ -3,7 +3,7 @@ date = '2025-09-04T10:25:15+05:30'
 title = 'Genetic Sequence Ambiguity Analyzer'
 summary = 'A simple project to quantify the ambiguity in COVID-19 gene sequences.'
 author = "Nakul Bhat"
-tags = ["Projects", "Publications"]
+tags = ["Projects"]
 +++
 
 
