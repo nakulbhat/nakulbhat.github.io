@@ -28,3 +28,24 @@
         height: 1.7rem;
         vertical-align: 0em;
 }
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between; /* Pushes the items to the far left and right */
+  align-items: center; /* Vertically aligns the links */
+padding: 20px 0;
+}
+
+
+/* Media query for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {
+  .post-navigation {
+    flex-direction: column; /* Stacks the items vertically */
+    align-items: stretch; /* Makes them fill the full width */
+  }
+
+  /* Optional: Add space between the stacked links */
+  .post-navigation .previous-post-link {
+    margin-bottom: 10px;
+  }
+}
