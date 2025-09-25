@@ -57,3 +57,22 @@ footer .theme-by {
         height: 1.7rem;
         vertical-align: 0em;
 }
+
+.post-navigation {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+padding: 20px 0;
+}
+
+
+
+@media (max-width: 768px) {
+  .post-navigation {
+    flex-direction: column; 
+    align-items: stretch; 
+  }
+  .post-navigation .previous-post-link {
+    margin-bottom: 10px;
+  }
+}
