@@ -19,8 +19,84 @@ h1{
 }
 &lt;/style&gt;
 &lt;h1 id="padavinangady-nakul-bhat"&gt;Padavinangady Nakul Bhat&lt;/h1&gt;
-&lt;img src="https://nakulbhat.github.io/assets/profilePhoto.jpg" alt="Nakul Bhat" class='hero-pic' /&gt;
-Hi There, I'm Nakul, a bioinformatics researcher who really, really loves typesetting.</description></item><item><title/><link>https://nakulbhat.github.io/abstract/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/abstract/</guid><description>&lt;p&gt;During the compilation of a &lt;span class="latex"&gt;L&lt;span&gt;a&lt;/span&gt;T&lt;span&gt;e&lt;/span&gt;X&lt;/span&gt; document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects, both ongoing and completed. Please visit my &lt;a href="about"&gt;about page&lt;/a&gt; to read more about me.&lt;/p&gt;</description></item><item><title/><link>https://nakulbhat.github.io/socials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/socials/</guid><description>&lt;div&gt;
+&lt;p&gt;
+
+ 
+
+
+
+
+
+
+
+
+ 
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+
+
+
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+
+
+&lt;picture&gt;
+ &lt;source type="image/webp"
+ srcset="https://nakulbhat.github.io/profilePhoto-120x%20Gaussian.webp" height="1917" width="1920" data-sizes="auto" data-srcset="https://nakulbhat.github.io/profilePhoto-470x.webp 470w,
+https://nakulbhat.github.io/profilePhoto-820x.webp 820w,
+https://nakulbhat.github.io/profilePhoto-1170x.webp 1170w,
+https://nakulbhat.github.io/profilePhoto-1520x.webp 1520w,
+https://nakulbhat.github.io/profilePhoto-1920x.webp 1920w"&gt;
+ 
+
+
+&lt;noscript&gt;
+ 
+
+
+
+&lt;img src="https://nakulbhat.github.io/profilePhoto-1920x.jpg"
+class="hero-pic" loading="lazy" height="1917" width="1920" srcset="https://nakulbhat.github.io/profilePhoto-470x.jpg 470w,
+https://nakulbhat.github.io/profilePhoto-820x.jpg 820w,
+https://nakulbhat.github.io/profilePhoto-1170x.jpg 1170w,
+https://nakulbhat.github.io/profilePhoto-1520x.jpg 1520w,
+https://nakulbhat.github.io/profilePhoto-1920x.jpg 1920w"&gt;
+ &lt;/noscript&gt;&lt;img
+ src="https://nakulbhat.github.io/profilePhoto-120x%20Gaussian.jpg"
+ data-src="https://nakulbhat.github.io/profilePhoto-1920x.jpg" 
+ class="hero-pic blur-up lazyload" 
+ height="1917" width="1920" data-sizes="auto" data-srcset="https://nakulbhat.github.io/profilePhoto-470x.jpg 470w,
+https://nakulbhat.github.io/profilePhoto-820x.jpg 820w,
+https://nakulbhat.github.io/profilePhoto-1170x.jpg 1170w,
+https://nakulbhat.github.io/profilePhoto-1520x.jpg 1520w,
+https://nakulbhat.github.io/profilePhoto-1920x.jpg 1920w"&gt;
+&lt;/picture&gt;
+ 
+
+
+
+Hi There, I&amp;rsquo;m Nakul, a bioinformatics researcher who really, really loves typesetting.&lt;/p&gt;</description></item><item><title/><link>https://nakulbhat.github.io/abstract/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/abstract/</guid><description>&lt;p&gt;During the compilation of a &lt;span class="latex"&gt;L&lt;span&gt;a&lt;/span&gt;T&lt;span&gt;e&lt;/span&gt;X&lt;/span&gt; document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects, both ongoing and completed. Please visit my &lt;a href="about"&gt;about page&lt;/a&gt; to read more about me.&lt;/p&gt;</description></item><item><title/><link>https://nakulbhat.github.io/socials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/socials/</guid><description>&lt;div&gt;
  &lt;div class="social-links"&gt;
  &lt;a href="tags/projects" aria-label="Projects" title = "Projects"&gt;
  &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640"&gt;&lt;path d="M384 64H224c-17.7 0-32 14.3-32 32s14.3 32 32 32v151.5L103.5 490.3c-4.9 8.7-7.5 18.4-7.5 28.4 0 31.7 25.6 57.3 57.3 57.3h333.4c31.6 0 57.3-25.6 57.3-57.3 0-10-2.6-19.8-7.5-28.4L416 279.5V128c17.7 0 32-14.3 32-32s-14.3-32-32-32zm-96 215.5V128h64v151.5c0 11.1 2.9 22.1 8.4 31.8L402 384H238l41.6-72.7c5.5-9.7 8.4-20.6 8.4-31.8"/&gt;&lt;/svg&gt;
