@@ -13,9 +13,7 @@ enableInlineShortcodes = true
 
 [Params.author]
   name = "Nakul Bhat"
-  abstract = """During the compilation of a document, LaTeX produces several .aux files containing the content of a document being typeset.
-This website is written along similar lines, showcasing some my works-in-progress.
-I study [link](google.com)"""
+  secondLine = "Academic Portfolio"
 
 [taxonomies]
   category = "categories"
@@ -29,5 +27,5 @@ I study [link](google.com)"""
   [markup.highlight]
     style = "paraiso-dark"
 [Params]
-  homeTitle = "Nakul Bhat's Portfolio"
+  htmlTitle = "Nakul Bhat's Portfolio"
   # lightmode = true
