@@ -25,3 +25,35 @@ footer .theme-by {
   float: right;
   display: block;
 }
+
+@media screen and (min-width: 768px) {
+        body{
+                font-size: 20px;
+                max-width: 70ch;
+        }
+}
+
+.social-links {
+        font-size: 2rem;
+        text-align: center; /* This centers the links horizontally */
+        text-decoration: none;
+}
+
+.social-links a {
+        text-decoration: none;
+        margin: 0.1em;
+}
+
+.social-links svg{
+        fill: var(--link-visited);
+        width: 2rem;
+        height: 2rem;
+        vertical-align: -0.125em;
+}
+
+
+.social-links .icon-shrink{
+        width: 1.7rem;
+        height: 1.7rem;
+        vertical-align: 0em;
+}
