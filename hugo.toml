@@ -7,6 +7,9 @@ languageCode = 'en-us'
 
 enableInlineShortcodes = true
 
+[module]
+[[module.imports]]
+path = "github.com/hugo-mods/lazyimg"
 
 [pagination]
   pagerSize = 3
