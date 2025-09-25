@@ -1,5 +1,5 @@
 baseURL = 'https://nakulbhat.github.io/'
-theme = "HugoTex"
+theme = "HugoTeX-Plus"
 title = 'The aux Archive'
 
 DefaultContentLanguage = "en"
