@@ -24,6 +24,6 @@ h1{
 
 # Padavinangady Nakul Bhat
 
-<img src="/assets/profilePhoto.jpg" alt="Nakul Bhat" class='hero-pic' />
+{{< lazyimg img="profilePhoto.jpg" class="hero-pic" rendered="lqip" >}}
 Hi There, I'm Nakul, a bioinformatics researcher who really, really loves typesetting.
 
