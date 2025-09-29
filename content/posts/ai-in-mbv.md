@@ -2,7 +2,8 @@
 date = '2025-09-22T11:34:26+05:30'
 author = "Nakul Bhat"
 title = 'A Review of AI Tools in Molecular Biology and Virology'
-tags = [ 'Publications']
+categories = ['publications']
+tags = ['academic writing']
 summary = "A book chapter introducing the fundamentals of AI for molecular biologists and virologists"
 +++
 
