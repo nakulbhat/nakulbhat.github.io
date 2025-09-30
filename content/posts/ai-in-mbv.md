@@ -13,11 +13,7 @@ tags = [
   "Bioinformatics",
   "Virology",
   "Molecular biology",
-  "Ethical analysis",
-  "Critical thinking",
   "Technical communication",
-  "Model evaluation",
-  "Interdisciplinary synthesis"
 ]
 summary = "An in-depth exploration of artificial intelligence methodologies advancing molecular biology and virology through data-driven research and diagnostic innovation."
 +++
@@ -25,7 +21,7 @@ summary = "An in-depth exploration of artificial intelligence methodologies adva
 ## Publication Overview
 
 **Full Title:** A Review of AI Tools in Molecular Biology and Virology  
-**DOI:** [10.1007/978-3-031-77911-4_30](https://doi.org/10.1007/978-3-031-77911-4_30)
+**DOI:** [10.1007/978-3-031-77911-4_30](https://doi.org/10.1007/978-3-031-77911-4_30)  
 **Authors:** Padavinangady Nakul Bhat{{% sidenote %}}Department of Computer Science and Engineering, Manipal Institute of Technology, Manipal Academy of Higher Education, Manipal, Karnataka, India{{% /sidenote %}}, Seetharaman Balaji{{% sidenote %}}Manipal Institute of Technology, Manipal Academy of Higher Education, Manipal, Karnataka, India{{% /sidenote %}}, Paul Shapshak{{% sidenote %}}Division of Infectious Disease and International Medicine, Department of Internal Medicine, University of South Florida, Morsani College of Medicine, Tampa, FL, USA{{% /sidenote %}}  
 **Cite As:** Bhat, P.N., Balaji, S., Shapshak, P. (2025). A Review of AI Tools in Molecular Biology and Virology. In: Shapshak, P., Balaji, S., Kangueane, P., Kuhn, J.H., Somboonwit, C., Sinnott, J.T. (eds) Global Virology V: 21st Century Vaccines and Viruses. Springer, Cham. https://doi.org/10.1007/978-3-031-77911-4_30
 
