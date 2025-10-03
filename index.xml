@@ -98,8 +98,8 @@ https://nakulbhat.github.io/profilePhoto-1920x.jpg 1920w"&gt;
 
 Hi There, I&amp;rsquo;m Nakul, a bioinformatics researcher who really, really loves typesetting.&lt;/p&gt;</description></item><item><title/><link>https://nakulbhat.github.io/abstract/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/abstract/</guid><description>&lt;p&gt;During the compilation of a &lt;span class="latex"&gt;L&lt;span&gt;a&lt;/span&gt;T&lt;span&gt;e&lt;/span&gt;X&lt;/span&gt; document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects, both ongoing and completed. Please visit my &lt;a href="about"&gt;about page&lt;/a&gt; to read more about me.&lt;/p&gt;</description></item><item><title/><link>https://nakulbhat.github.io/socials/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://nakulbhat.github.io/socials/</guid><description>&lt;div&gt;
  &lt;div class="site-taxonomy-nav-links"&gt;
- &lt;a href="tags/projects" aria-label="Projects" title = "Projects"&gt; Projects &lt;/a&gt;
- &lt;a title= "Publications and Patents" href="tags/publications" aria-label="Publications and Patents"&gt; Publications &lt;/a&gt;
+ &lt;a href="categories/projects" aria-label="Projects" title = "Projects"&gt; Projects &lt;/a&gt;
+ &lt;a title= "Publications and Patents" href="categories/publications" aria-label="Publications and Patents"&gt; Publications &lt;/a&gt;
  &lt;a title= "Skills and Tools" href="tags" aria-label="Publications and Patents"&gt; Skills &lt;/a&gt;
  &lt;/div&gt;
  &lt;div class="social-links"&gt;
