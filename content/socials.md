@@ -1,7 +1,7 @@
 <div>
     <div class="site-taxonomy-nav-links">
-            <a href="tags/projects" aria-label="Projects" title = "Projects"> Projects </a>
-            <a title= "Publications and Patents" href="tags/publications" aria-label="Publications and Patents"> Publications </a>
+            <a href="categories/projects" aria-label="Projects" title = "Projects"> Projects </a>
+            <a title= "Publications and Patents" href="categories/publications" aria-label="Publications and Patents"> Publications </a>
             <a title= "Skills and Tools" href="tags" aria-label="Publications and Patents"> Skills </a>
     </div>
     <div class="social-links">
