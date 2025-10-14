@@ -1,1 +1,0 @@
-During the compilation of a <span class="latex">L<span>a</span>T<span>e</span>X</span> document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects, both ongoing and completed. Please visit my <a href="about">about page</a> to read more about me.
