@@ -31,23 +31,7 @@ footer .theme-by {
                 font-size: 20px;
                 max-width: 70ch;
         }
-    .site-taxonomy-nav-links {
-        flex-direction: row;
-        width: fit-content; 
-        align-items: center;
-        justify-content: center; 
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .site-taxonomy-nav-links a {
-        width: auto; 
-        margin: 0 15px; 
-        display: inline-flex; 
-        align-items: center;
-    }
 }
-
 .social-links {
         font-size: 2rem;
         text-align: center; 
@@ -59,58 +43,10 @@ footer .theme-by {
         margin: 0.1em;
 }
 
-.site-taxonomy-nav-links {
-    display: flex;
-    flex-direction: column;
-    width: fit-content; 
-    margin-left: auto;
-    margin-right: auto;
-    align-items: center; 
-    padding: 10px 0; 
-}
-
-.site-taxonomy-nav-links a {
-    /* Makes links fill the width of the container on mobile */
-        font-size: 1.2rem;
-    margin: 5px 0; 
-}
-
-/* --------------------------------------------------------------------------------------------------- */
-
-/* Media Query for Desktop (Screen width 768px and above) */
-@media (min-width: 768px) {
-    .site-taxonomy-nav-links {
-        /* Overrides for desktop: Side by side */
-        flex-direction: row;
-        /* Ensures the container itself takes up only the space it needs */
-        width: fit-content; 
-        /* Reset item alignment if needed, although 'center' works well for horizontal centering. 
-           'align-items: center;' will vertically align them if heights vary. */
-        align-items: center;
-        /* 'justify-content: center;' is key to horizontally centering the entire group of links */
-        justify-content: center; 
-        /* Ensure it's centered on the page */
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .site-taxonomy-nav-links a {
-        /* Overrides for desktop: Define individual link width/spacing */
-        width: auto; /* Allow links to shrink-wrap their content */
-        /* Add horizontal margin/padding for spacing between links */
-        margin: 0 15px; 
-        padding: 10px 20px;
-        /* Ensures the links align nicely on a single baseline if they contain different content/icons */
-        display: inline-flex; 
-        align-items: center;
-    }
-}
-
-/* Optional: Additional styling for the span element */
 .social-links-subtitles {
     font-weight: bold;
     font-size: 1rem;
-    white-space: nowrap; /* Prevents text from wrapping on one line */
+    white-space: nowrap; 
 }
 
 .social-links svg{
@@ -152,9 +88,22 @@ footer .theme-by {
 }
 
 main {
-  flex: 1; /* pushes footer down when page is short */
+  flex: 1;
 }
 
 html, body {
   height: 100%;
+}
+
+nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 1em;
+}
+
+.hero {
+  text-align: center;     
+  font-size: 2em;        
+  margin: 0 auto;       
 }
