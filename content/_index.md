@@ -1,7 +1,6 @@
 +++
-title = "The aux Archive" # does not actually matter
-Author = "Nakul Bhat"
 +++
+<p class="hero"><code class="language-bash">Nakul Bhat's $HOME</code></p>
 
 <div>
     <div class="social-links">

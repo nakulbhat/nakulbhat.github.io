@@ -10,6 +10,9 @@ enableInlineShortcodes = true
 [pagination]
   pagerSize = 3
 
+[Params.Author]
+  name = "Nakul Bhat"
+
 [Params]
   htmlTitle = "Nakul Bhat's Portfolio"
 
