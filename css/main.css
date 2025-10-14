@@ -1,6 +1,6 @@
 footer .theme-by {
         text-align: center;
-        margin: 100px 0 0;
+        margin: 20px 0 0;
 }
 
 .pager {
@@ -144,4 +144,17 @@ footer .theme-by {
         .post-navigation .previous-post-link {
                 margin-bottom: 10px;
         }
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* pushes footer down when page is short */
+}
+
+html, body {
+  height: 100%;
 }
