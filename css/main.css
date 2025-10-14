@@ -1,3 +1,9 @@
+@media screen and (min-width: 768px) {
+        body{
+                font-size: 20px;
+                max-width: 70ch;
+        }
+}
 footer .theme-by {
         text-align: center;
         margin: 20px 0 0;
@@ -26,12 +32,6 @@ footer .theme-by {
         display: block;
 }
 
-@media screen and (min-width: 768px) {
-        body{
-                font-size: 20px;
-                max-width: 70ch;
-        }
-}
 .social-links {
         font-size: 2rem;
         text-align: center; 
@@ -41,12 +41,6 @@ footer .theme-by {
 .social-links a {
         text-decoration: none;
         margin: 0.1em;
-}
-
-.social-links-subtitles {
-    font-weight: bold;
-    font-size: 1rem;
-    white-space: nowrap; 
 }
 
 .social-links svg{
@@ -60,7 +54,7 @@ footer .theme-by {
 .social-links .icon-shrink{
         width: 1.7rem;
         height: 1.7rem;
-        vertical-align: 0em;
+        vertical-align: -0.125em;
 }
 
 .post-navigation {
@@ -106,4 +100,23 @@ nav {
   text-align: center;     
   font-size: 2em;        
   margin: 0 auto;       
+}
+
+.logo {
+    width: 18ch;
+    aspect-ratio: 6 / 1; 
+    height: auto;        
+    vertical-align: middle;
+}
+button {
+  all: unset; 
+  display: inline-flex; 
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+}
+#addClassBtn svg {
+  width: 2em;   
+  height: 1em;
+  fill: currentColor;  
 }
