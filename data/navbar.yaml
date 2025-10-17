@@ -1,0 +1,7 @@
+links:
+  - name: "Blog"
+    url: "/blog/"
+  - name: "Papers"
+    url: "/papers/"
+  - name: "Projects"
+    url: "/projects/"
