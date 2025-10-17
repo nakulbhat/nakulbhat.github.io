@@ -1,0 +1,29 @@
+hero:
+  title: "Nakul Bhat's $HOME"
+
+abstract:
+  text: "During the compilation of a L<span>a</span>T<span>e</span>X document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects, both ongoing and completed. Please visit my <a href='/about'>about page</a> to read more about me."
+
+social_links:
+  - name: ResearchGate
+    url: "https://www.researchgate.net/profile/Padavinangady-Nakul-Bhat"
+    icon: "ai ai-researchgate"
+  - name: ORCID
+    url: "https://orcid.org/0009-0003-6017-3093"
+    icon: "ai ai-orcid"
+  - name: CV
+    url: "assets/resume.pdf"
+    icon: "ai ai-cv"
+  - name: Email
+    url: "mailto:nakul1.mitmpl2023@learner.manipal.edu"
+    icon: "fa-solid fa-envelope"
+  - name: LinkedIn
+    url: "https://linkedin.com/in/nakulbhat"
+    icon: "fa-brands fa-linkedin"
+  - name: GitHub
+    url: "https://github.com/nakulbhat"
+    icon: "fa-brands fa-github"
+  - name: Google Scholar
+    url: "https://scholar.google.com/citations?user=iIjhA_AAAAAJ"
+    icon: "ai ai-google-scholar"
+
