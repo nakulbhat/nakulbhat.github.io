@@ -32,32 +32,27 @@ footer .theme-by {
         display: block;
 }
 
-.social-links-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* center all rows */
-    gap: 0.5rem;           /* spacing between rows */
-    margin-top: 1rem;
-}
-
 .social-links {
     display: flex;
     justify-content: center; /* center links in each row */
     flex-wrap: wrap;         /* allow wrapping on very small screens */
-    gap: 0.5rem;             /* spacing between links */
+    gap: 0.5rem;            /* spacing between links */
 }
 
 .social-links a {
+    display: flex;           /* makes the icon a flex child */
+    align-items: center;     /* vertically centers the <i> */
+    justify-content: center; /* horizontally centers if needed */
     text-decoration: none;
     font-size: 2rem;
 }
 
-.social-links svg,
 .social-links i {
-    fill: var(--link-visited);
-    width: 2rem;
-    height: 2rem;
-    vertical-align: -0.125em;
+    color: var(--link-visited); /* use color instead of fill for <i> */
+    width: 2.5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;        /* ensures vertical centering */
+    text-align: center;          /* centers font inside the box */
 }
 .post-navigation {
         display: flex;
@@ -166,3 +161,4 @@ nav > div {
   align-items: center;
   gap: 1em; /* optional spacing */
 }
+
