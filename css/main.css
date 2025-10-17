@@ -32,31 +32,33 @@ footer .theme-by {
         display: block;
 }
 
+.social-links-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* center all rows */
+    gap: 0.5rem;           /* spacing between rows */
+    margin-top: 1rem;
+}
+
 .social-links {
-        font-size: 2rem;
-        text-align: center; 
-        text-decoration: none;
+    display: flex;
+    justify-content: center; /* center links in each row */
+    flex-wrap: wrap;         /* allow wrapping on very small screens */
+    gap: 0.5rem;             /* spacing between links */
 }
 
 .social-links a {
-        text-decoration: none;
-        margin: 0.1em;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
-.social-links svg{
-        fill: var(--link-visited);
-        width: 2rem;
-        height: 2rem;
-        vertical-align: -0.125em;
+.social-links svg,
+.social-links i {
+    fill: var(--link-visited);
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
 }
-
-
-.social-links .icon-shrink{
-        width: 1.7rem;
-        height: 1.7rem;
-        vertical-align: -0.125em;
-}
-
 .post-navigation {
         display: flex;
         justify-content: space-between; 
