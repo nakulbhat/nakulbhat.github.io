@@ -1,18 +1,21 @@
+/* bigger font on large screen */
 @media screen and (min-width: 768px) {
         body{
                 font-size: 20px;
                 max-width: 70ch;
         }
 }
+
+
 footer .theme-by {
         text-align: center;
-        margin: 20px 0 0;
+        margin: 2em 0 1em;
 }
 
 .pager {
         list-style: none;
         text-align: center;
-        margin: 20px 0 0;
+        margin: 2em 0 0;
         padding-left: 0;
 }
 
@@ -21,39 +24,40 @@ footer .theme-by {
 }
 
 .pager .previous > a {
-        margin: 20px 0 0;
+        margin: 2em 0 0;
         float: left;
         display: block;
 }
 
 .pager .next > a {
-        margin: 20px 0 0;
+        margin: 2em 0 0;
         float: right;
         display: block;
 }
 
 .social-links {
     display: flex;
-    justify-content: center; /* center links in each row */
-    flex-wrap: wrap;         /* allow wrapping on very small screens */
-    gap: 0.5rem;            /* spacing between links */
+    justify-content: center;
+    flex-wrap: wrap;       
+    gap: 0.5rem;          
 }
 
 .social-links a {
-    display: flex;           /* makes the icon a flex child */
-    align-items: center;     /* vertically centers the <i> */
-    justify-content: center; /* horizontally centers if needed */
+    display: flex;       
+    align-items: center;
+    justify-content: center;
     text-decoration: none;
     font-size: 2rem;
 }
 
 .social-links i {
-    color: var(--link-visited); /* use color instead of fill for <i> */
+    color: var(--link-visited); 
     width: 2.5rem;
     height: 2.5rem;
-    line-height: 2.5rem;        /* ensures vertical centering */
-    text-align: center;          /* centers font inside the box */
+    line-height: 2.5rem;      
+    text-align: center;      
 }
+
 .post-navigation {
         display: flex;
         justify-content: space-between; 
@@ -63,15 +67,15 @@ footer .theme-by {
 
 
 
-@media (max-width: 768px) {
-        .post-navigation {
-                flex-direction: column; 
-                align-items: stretch; 
-        }
-        .post-navigation .previous-post-link {
-                margin-bottom: 10px;
-        }
-}
+/* @media (max-width: 768px) { */
+/*         .post-navigation { */
+/*                 flex-direction: column;  */
+/*                 align-items: stretch;  */
+/*         } */
+/*         .post-navigation .previous-post-link { */
+/*                 margin-bottom: 10px; */
+/*         } */
+/* } */
 
 .page-wrapper {
   display: flex;
@@ -115,8 +119,8 @@ button {
   cursor: pointer; 
 }
 nav svg {
-  width: 1.25em;   
-  height: 1.25em;
+  width: 1em;   
+  height: 1em;
   fill: currentColor;  
 }
 /* ---------- Hamburger Menu Additions ---------- */
