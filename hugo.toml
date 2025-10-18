@@ -27,7 +27,10 @@ enableInlineShortcodes = true
     [markup.goldmark.renderer]
       unsafe = true
   [markup.highlight]
-    style = "paraiso-dark"
+    codeFences = true
+    noClasses = false
+    guessSyntax = true
+    lineNos = false          # true if you want line numbers
 
 [module]
   [module.imports]
