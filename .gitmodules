@@ -1,3 +1,3 @@
-[submodule "themes/HugoTeX-Plus"]
-	path = themes/HugoTeX-Plus
-	url = git@github.com:nakulbhat/HugoTeX-Plus.git
+[submodule "themes/HugoTeXPlus"]
+	path = themes/HugoTeXPlus
+	url = https://github.com/nakulbhat/HugoTeXPlus.git
