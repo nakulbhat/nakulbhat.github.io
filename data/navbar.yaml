@@ -5,3 +5,5 @@ links:
     url: "/tools/"
   - name: "Research"
     url: "/research/"
+  - name: "About Me"
+    url: "/about/"
