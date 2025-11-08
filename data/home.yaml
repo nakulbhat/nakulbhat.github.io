@@ -2,7 +2,7 @@ hero:
   title: "Nakul Bhat's $HOME"
 
 abstract:
-  text: "During the compilation of a L<span>a</span>T<span>e</span>X document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects, both ongoing and completed. Please visit my <a href='/about'>about page</a> to read more about me."
+  text: "During the compilation of a LaTeX document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects and setup. Please navigate using the links above to read more about me and my work.<br>The best way to contact me is through email: nakulbhat034 [at] gmail [dot] com"
 
 social_links:
   - name: LinkedIn
@@ -12,7 +12,7 @@ social_links:
     url: "https://github.com/nakulbhat"
     icon: "fa-brands fa-github"
   - name: CV
-    url: "assets/resume.pdf"
+    url: "resume.pdf"
     icon: "ai ai-cv"
   - name: Google Scholar
     url: "https://scholar.google.com/citations?user=iIjhA_AAAAAJ"
