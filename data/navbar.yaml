@@ -1,9 +1,7 @@
 links:
   - name: "Blog"
     url: "/blog/"
-  - name: "Tools"
-    url: "/tools/"
   - name: "Research"
     url: "/research/"
-  - name: "About Me"
+  - name: "About"
     url: "/about/"

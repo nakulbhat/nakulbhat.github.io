@@ -2,7 +2,17 @@ hero:
   title: "Nakul Bhat's $HOME"
 
 abstract:
-  text: "During the compilation of a LaTeX document, several auxiliary files are produced, each containing information about the typesetting of the document. This website is written in a similar style, and has information about my projects and setup. Please navigate using the links above to read more about me and my work.<br>The best way to contact me is through email: nakulbhat034 [at] gmail [dot] com"
+  text: >
+    During the compilation of a <span class="latex">L<span>a</span>T<span>e</span>X</span> document, several auxiliary files
+    are produced, each containing information about the typesetting process. This
+    website is organized in a similar style and includes details about my
+    projects and setup. The look and feel of this website is meant to mimick a the
+    standard LaTeX article class (with a little artistic interpretation). 
+
+
+    You can visit [about](/about/) and [research](/research/) to learn more
+    about me and my work. The best way to contact me is by email, which you’ll
+    find in my [resume](/resume.pdf).
 
 social_links:
   - name: LinkedIn
