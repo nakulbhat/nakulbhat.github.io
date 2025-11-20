@@ -1,5 +1,5 @@
 hero:
-  title: "Nakul Bhat's $HOME"
+  title: "Nakul Bhat"
 
 abstract:
   text: >
@@ -17,19 +17,13 @@ abstract:
 social_links:
   - name: LinkedIn
     url: "https://linkedin.com/in/nakulbhat"
-    icon: "fa-brands fa-linkedin"
+    icon: "fa-brands fa-linkedin-in"
   - name: GitHub
     url: "https://github.com/nakulbhat"
     icon: "fa-brands fa-github"
-  - name: CV
-    url: "resume.pdf"
-    icon: "ai ai-cv"
   - name: Google Scholar
     url: "https://scholar.google.com/citations?user=iIjhA_AAAAAJ"
     icon: "ai ai-google-scholar"
-  - name: ResearchGate
-    url: "https://www.researchgate.net/profile/Padavinangady-Nakul-Bhat"
-    icon: "ai ai-researchgate"
-  - name: ORCID
-    url: "https://orcid.org/0009-0003-6017-3093"
-    icon: "ai ai-orcid"
+  - name: CV
+    url: "resume.pdf"
+    icon: "ai ai-cv"
