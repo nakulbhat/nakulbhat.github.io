@@ -49,3 +49,16 @@ author = "Padavinangady Nakul Bhat"
 - **P. N. Bhat** and Manoj T.  *A System and Method for a Graph-Based Framework for Representing and Analyzing Pedigree Charts.*  Indian Patent Application No. 202441103185, published, 2025.
 
 - **P. N. Bhat.**  *Iterative Imputation System and Method for Predicting Missing Environmental, Social and Governance (ESG) Data.*  Indian Patent Application No. 202441079378, published, 2024.
+
+## Transcript
+
+All courses were taken in-person at Manipal Institute of Technology unless indicated otherwise.
+
+| Course Name                     | Credits | Grade |
+|---------------------------------|---------|-------|
+| Introduction to Quantum Baking  | 3       | A-    |
+| Applied Dragon Taming           | 4       | B+    |
+| Advanced Spreadsheet Sorcery    | 2       | A     |
+| Intergalactic Trade Policies    | 3       | B     |
+| Cryptozoology Field Methods     | 4       | A-    |
+
