@@ -1,37 +1,49 @@
-name: GitHub Pages Workflow
+name: Build and Deploy (Pandoc)
 
 on:
   push:
     branches:
-      - main  # Set a branch to deploy
-  pull_request:
+      - main
   workflow_dispatch:
 
 jobs:
   deploy:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     permissions:
       contents: write
     concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+      group: pages-${{ github.ref }}
+      cancel-in-progress: true
+
     steps:
-      - uses: actions/checkout@v4
-        with:
-          submodules: true  # Fetch Hugo themes (true OR recursive)
-          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v3
-        with:
-          hugo-version: 'latest'
-          extended: true
+      - name: Install Pandoc
+        run: sudo apt-get update && sudo apt-get install -y pandoc
 
-      - name: Build
-        run: hugo --minify
+      - name: Build HTML
+        run: |
+          mkdir public
 
-      - name: Deploy
+          # convert all .md files, preserve structure
+          find . -type f -name "*.md" \
+            -not -path "./.github/*" | while read file; do
+
+            output="public/${file#./}"
+            output="${output%.md}.html"
+
+            mkdir -p "$(dirname "$output")"
+
+            pandoc -s "$file" \
+              --template=template.html \
+              -o "$output"
+          done
+
+      - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
+          publish_branch: gh-pages
+          force_orphan: true
