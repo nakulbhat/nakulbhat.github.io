@@ -1,3 +1,2 @@
-# Test Heading
-
-Test content and a [link](projects.html) and a folder [link](nest/test.html)
+# Nakul Bhat's Homepage
+Hello, this site is currently under testing. Content will be updated soon.
