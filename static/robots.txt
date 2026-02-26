@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /resume.pdf
-
-Sitemap: https://nakulbhat.github.io/sitemap.xml
