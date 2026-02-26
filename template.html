@@ -1,0 +1,82 @@
+<!doctype html>
+<html $if(lang)$ lang="$lang$" $endif$>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="generator" content="pandoc" />
+
+$for(author-meta)$
+<meta name="author" content="$author-meta$" />
+$endfor$
+$if(date-meta)$
+<meta name="date" content="$date-meta$" />
+$endif$
+
+<title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+
+<style>
+:root {
+  --bg: #ffffff;
+  --text: #000000;
+}
+
+[data-theme="dark"] {
+  --bg: #000000;
+  --text: #ffffff;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: monospace;
+  max-width: 700px;
+  margin: 40px auto;
+  line-height: 1.6;
+}
+
+a {
+  color: inherit;
+}
+
+.toggle {
+  display: block;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+code {
+  white-space: pre;
+}
+</style>
+
+$for(header-includes)$
+$header-includes$
+$endfor$
+
+</head>
+<body>
+
+<a class="toggle" href="#" onclick="toggleTheme(); return false;">dark mode</a>
+
+$body$
+
+<script>
+function toggleTheme() {
+  const root = document.documentElement;
+  const current = root.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  root.setAttribute("data-theme", next);
+  localStorage.setItem("theme", next);
+}
+
+(function () {
+  const saved = localStorage.getItem("theme");
+  if (saved) {
+    document.documentElement.setAttribute("data-theme", saved);
+  }
+})();
+</script>
+
+</body>
+</html>
