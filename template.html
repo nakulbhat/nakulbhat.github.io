@@ -29,9 +29,20 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: monospace;
-  max-width: 700px;
-  margin: 40px auto;
   line-height: 1.6;
+
+  /* Desktop layout */
+  max-width: 80ch;
+  margin: 40px auto;
+  padding: 0;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+  body {
+    max-width: 80%;
+    margin: 40px auto;
+  }
 }
 
 a {
@@ -57,24 +68,54 @@ $endfor$
 </head>
 <body>
 
-<a class="toggle" href="#" onclick="toggleTheme(); return false;">dark mode</a>
+<a class="toggle" href="#" onclick="toggleTheme(); return false;" id="theme-toggle">
+  dark mode
+</a>
 
 $body$
 
 <script>
-function toggleTheme() {
-  const root = document.documentElement;
-  const current = root.getAttribute("data-theme");
-  const next = current === "dark" ? "light" : "dark";
-  root.setAttribute("data-theme", next);
-  localStorage.setItem("theme", next);
+function getPreferredTheme() {
+  const saved = localStorage.getItem("theme");
+  if (saved) return saved;
+
+  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+
+  return "light";
 }
 
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  updateToggleText(theme);
+}
+
+function updateToggleText(theme) {
+  const toggle = document.getElementById("theme-toggle");
+  if (!toggle) return;
+  toggle.textContent = theme === "dark" ? "light mode" : "dark mode";
+}
+
+function toggleTheme() {
+  const current = document.documentElement.getAttribute("data-theme");
+  const next = current === "dark" ? "light" : "dark";
+  localStorage.setItem("theme", next);
+  applyTheme(next);
+}
+
+/* Initial load */
 (function () {
-  const saved = localStorage.getItem("theme");
-  if (saved) {
-    document.documentElement.setAttribute("data-theme", saved);
-  }
+  const theme = getPreferredTheme();
+  applyTheme(theme);
+
+  /* Optional: react to system changes if no manual override */
+  const media = window.matchMedia("(prefers-color-scheme: dark)");
+  media.addEventListener("change", (e) => {
+    if (!localStorage.getItem("theme")) {
+      applyTheme(e.matches ? "dark" : "light");
+    }
+  });
 })();
 </script>
 
