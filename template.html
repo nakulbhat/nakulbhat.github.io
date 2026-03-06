@@ -4,28 +4,17 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="generator" content="pandoc" />
-
 $for(author-meta)$
 <meta name="author" content="$author-meta$" />
 $endfor$
 $if(date-meta)$
 <meta name="date" content="$date-meta$" />
 $endif$
-
 <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
-
 <style>
-:root {
-  --bg: #ffffff;
-  --text: #000000;
-}
-[data-theme="dark"] {
-  --bg: #000000;
-  --text: #ffffff;
-}
 body {
-  background: var(--bg);
-  color: var(--text);
+  background: #000000;
+  color: #ffffff;
   font-family: monospace;
   line-height: 1.6;
   max-width: 80ch;
@@ -41,75 +30,26 @@ body {
 a {
   color: inherit;
 }
-.toggle {
-  margin-bottom: 2rem;
-  cursor: pointer;
-  text-decoration: underline;
-}
 code {
   white-space: pre;
 }
 h1, h2, h3, h4, h5, h6 {
   position: relative;
 }
-
 .header-anchor {
   float: right;
   text-decoration: none;
   opacity: 0.3;
 }
-
 .header-anchor:hover {
   opacity: 1;
 }
 </style>
-
 $for(header-includes)$
 $header-includes$
 $endfor$
-
 </head>
 <body>
-
-<a class="toggle" href="#" onclick="toggleTheme(); return false;" id="theme-toggle"> Dark Mode </a>
-
 $body$
-
-<script>
-function getPreferredTheme() {
-  const saved = localStorage.getItem("theme");
-  if (saved) return saved;
-  if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    return "dark";
-  }
-  return "light";
-}
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  updateToggleText(theme);
-}
-function updateToggleText(theme) {
-  const toggle = document.getElementById("theme-toggle");
-  if (!toggle) return;
-  toggle.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
-}
-function toggleTheme() {
-  const current = document.documentElement.getAttribute("data-theme");
-  const next = current === "dark" ? "light" : "dark";
-  localStorage.setItem("theme", next);
-  applyTheme(next);
-}
-(function () {
-  const theme = getPreferredTheme();
-  applyTheme(theme);
-  const media = window.matchMedia("(prefers-color-scheme: dark)");
-  media.addEventListener("change", (e) => {
-    if (!localStorage.getItem("theme")) {
-      applyTheme(e.matches ? "dark" : "light");
-    }
-  });
-})();
-</script>
-
 </body>
 </html>
