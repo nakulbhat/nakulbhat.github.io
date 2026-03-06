@@ -2,32 +2,41 @@
 title: Nakul Bhat's Homepage
 author: Nakul Bhat
 ---
-# Nakul Bhat's Homepage
-Hello there, I don't know how you ended up here, but it seems that you want to
-know more about me.
-Well, for one, the austerity of this website should tell you a lot; I am
-someone who like minimalism and an ironic amount of words (a yapper).
-Aside from wasting my time on useless projects and software thingamabobs, I
-like to (perpetually) train for a triathlon, cook food to fail one,
-and read books to procrastinate on the few deadlines I have.
+# Nakul Bhat's $HOME
 
-## FAQ: What Do I Actually Do?
-So, I'm a polymath, except for the fact that I am nowhere near as smart.
-This has resulted in the enthusiastic inauguration of dozens of projects that
-have never seen the light of day.<br>
-Most of my completed projects are research related, specifically bioinformatics
-and cheminformatics.
-I also love to tinker, starting with Arduinos in my younger years, and maturing
-into my heavily customized Linux workflow (jargon, "rice").
+Hi there! It seems that you have stumbled onto my website. I am a CS student at
+the Manipal Institute of Technology. I like to solve problems and explore
+questions, especially if they are related to CS or bioinformatics. 
 
-## FAQ: What Do You Like to Do?
-Honestly, everything.
-Even glossing over the surface level satisfaction you get from finishing tasks
-at work, I enjoy doing them, purely as an exercise of intellect.
-I also have my version of TikTok or Instagram---finding
-random tools for eking out that little bit of efficiency doing the most
-mundane things.
+## My Work
 
-## Curated Links
-[Design Philosophy of This Site](design.html)<br>
-I'll put some more content when I feel like it. Adiós?
+Besides my studies at Manipal, I work in bioinformatics and cheminformatics
+research, having several projects in genetics, drug discovery and explainable
+AI. 
+
+During the summer of 2025, I was a Summer Research Fellow at the Indian
+Institute of Science, where I worked on a new probabilistic model for
+simulating Inheritance.
+
+**New:** I will be joining the GMM group at Intel for a year-long internship 
+from June 2026! Looking forward to meet my new colleagues!
+
+## Tools
+
+I am happy to say that I've been freed from the shackles of Windows, and use
+NixOS as my daily driver. My Linux rice has evolved over time to be devoid of
+any colour and animation, which is what works for me.
+
+Most of my work happens on plaintext, and I have found that there is almost
+nothing that can compete with NeoVim's modal editing for me. I am also a fan of
+the WYSIWYM philosophy, and by extension LaTeX.
+
+## Social Media
+
+I limit my time on social media, so you are better off reaching out through
+email.
+
+nakulbhat034 [at] gmail [dot] com<br>
+[GitHub](https://github.com/nakulbhat)<br>
+[LinkedIn](https://linkedin.com/in/nakulbhat)<br>
+[Google Scholar](https://scholar.google.com/citations?user=iIjhA_AAAAAJ)

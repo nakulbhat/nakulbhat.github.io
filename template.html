@@ -49,6 +49,19 @@ a {
 code {
   white-space: pre;
 }
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+}
+
+.header-anchor {
+  float: right;
+  text-decoration: none;
+  opacity: 0.3;
+}
+
+.header-anchor:hover {
+  opacity: 1;
+}
 </style>
 
 $for(header-includes)$
@@ -58,8 +71,7 @@ $endfor$
 </head>
 <body>
 
-<!-- <a href='socials.html'>Social Media</a> -->
-<a class="toggle" href="#" onclick="toggleTheme(); return false;" id="theme-toggle"> dark mode </a>
+<a class="toggle" href="#" onclick="toggleTheme(); return false;" id="theme-toggle"> Dark Mode </a>
 
 $body$
 
@@ -79,7 +91,7 @@ function applyTheme(theme) {
 function updateToggleText(theme) {
   const toggle = document.getElementById("theme-toggle");
   if (!toggle) return;
-  toggle.textContent = theme === "dark" ? "light mode" : "dark mode";
+  toggle.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
 }
 function toggleTheme() {
   const current = document.documentElement.getAttribute("data-theme");

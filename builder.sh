@@ -11,5 +11,7 @@ mkdir public
 
   pandoc -s "$file" \
       --template=template.html \
-      -o "$output"
+      -o "$output" \
+      -f markdown-smart \
+      -t html-smart
   done
