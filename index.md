@@ -2,13 +2,32 @@
 title: Nakul Bhat's Homepage
 author: Nakul Bhat
 ---
-# Nakul Bhat's $HOME
 
-Hi there! It seems that you have stumbled onto my website. I am a junior CS
-student at the Manipal Institute of Technology. I like to solve problems and
-explore questions, especially if they are related to CS or bioinformatics. 
+```
+        █     
+ ▄ ▄▄   █▄▄▄  
+ █▀  █  █▀ ▀█ 
+ █   █  █   █ 
+ █   █  ██▄█▀ 
+```
 
-## Updates
+```
+
+
+
+About
+=====
+```
+Hello fellow straggler. I'm Nakul Bhat, a CS student at the Manipal Institute 
+of Technology. A researcher by trade and a open-source enthusiast, 
+
+```
+
+
+
+Updates
+=======
+```
 
 06/03/2026: I will be joining the GMM group at Intel for a year-long internship 
 from June 2026! Looking forward to meet my new colleagues!
@@ -27,8 +46,13 @@ work at the Indian Institute of Science's Computational and Data Sciences
 Department under Professor Debnath Pal. I can't wait to join the PalLab!
 
 
-## My Work
+```
 
+
+
+Work
+====
+```
 Besides my studies at Manipal, I work in bioinformatics and cheminformatics
 research, having several projects in genetics, drug discovery and explainable
 AI. You can find all my publications on my Google Scholar page; I've also published
@@ -42,7 +66,13 @@ I also like to play around with low-level systems, and solve questions on
 leetcode. Opinion: Python is not a real programming language (even if it gets
 you paid). 
 
-## Tools
+```
+
+
+
+Tools
+=====
+```
 
 I am happy to say that I've been freed from the shackles of Windows, and use
 NixOS as my daily driver. My Linux rice has evolved over time to be devoid of
@@ -55,7 +85,13 @@ the WYSIWYM philosophy, and by extension LaTeX. Almost all of my work happens in
 private repos, so I cannot share it here. I have made sure to properly version
 and archive my public work, which you can checkout on my GitHub.
 
-## Social Media
+```
+
+
+
+Social Media
+============
+```
 
 I limit my time on social media, so you are better off reaching out through
 email.
