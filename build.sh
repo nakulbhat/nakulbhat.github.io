@@ -1,9 +1,14 @@
 #!/bin/bash
 set -e
 
-# Install dependencies
-apt-get install -y pandoc
-npm install -g html-minifier-terser
+# Install Pandoc (no root needed)
+PANDOC_VERSION="3.9"
+curl -sSL "https://github.com/jgm/pandoc/releases/download/${PANDOC_VERSION}/pandoc-${PANDOC_VERSION}-linux-amd64.tar.gz" \
+  | tar -xz -C /tmp
+export PATH="/tmp/pandoc-${PANDOC_VERSION}/bin:$PATH"
+
+# Install html-minifier-terser
+npm install html-minifier-terser
 
 # Build HTML
 mkdir -p public
@@ -17,5 +22,5 @@ find . -type f -name "*.md" \
   pandoc -s "$file" \
     --template=template.html \
     -o "$output"
-  html-minifier-terser --collapse-whitespace --remove-comments --minify-css true -o "$output" "$output"
+  ./node_modules/.bin/html-minifier-terser --collapse-whitespace --remove-comments --minify-css true -o "$output" "$output"
 done
