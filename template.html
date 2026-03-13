@@ -9,16 +9,155 @@
 
         $for(author-meta)$
         <meta name="author" content="$author-meta$" />
-        <link rel="stylesheet" href="assets/css/styles.css">
         $endfor$
 
         $if(date-meta)$
         <meta name="date" content="$date-meta$" />
         $endif$
 
-        <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
-        <link rel="icon" type="image/png" href="assets/images/logo-square.svg">
+        <style>
+        body {
+            background: #000000;
+            color: #ffffff;
+            font-size: 16px;
+            font-family: monospace;
+            line-height: 1.6;
+            max-width: 80ch;
+            margin: 40px auto;
+            padding: 0;
+        }
 
+        @media (max-width: 768px) {
+            body {
+                max-width: 80%;
+                margin: 40px auto;
+            }
+        }
+
+        a {
+            color: inherit;
+        }
+
+        code, pre {
+            line-height: 1.2;
+            white-space: pre;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center; /* vertically centers links to logo */
+        }
+
+        .nav-right {
+            display: flex;
+            gap: 1rem;
+        }
+
+        /* On smaller screens, stack links vertically */
+        @media (max-width: 768px) {
+            .nav-right {
+                flex-direction: column;
+                align-items: flex-end; /* keeps links to the right */
+                gap: 0.5rem;
+            }
+        }
+
+
+        /* remarkdown core */
+        .remarkdown {
+            line-height: 1.5;
+            font-family: monospace, monospace;
+        }
+        .remarkdown pre,
+        .remarkdown code,
+        .remarkdown kbd,
+        .remarkdown samp {
+            font-family: inherit;
+        }
+
+        /* headings */
+        .remarkdown h1,
+        .remarkdown h2,
+        .remarkdown h3,
+        .remarkdown h4,
+        .remarkdown h5,
+        .remarkdown h6 {
+            font-size: inherit;
+            font-weight: inherit;
+            margin-top: 2.25em;
+            margin-bottom: 1.5em;
+        }
+        .remarkdown h3,
+        .remarkdown h4,
+        .remarkdown h5,
+        .remarkdown h6 {
+            margin-top: 1.5em;
+        }
+
+        /* h1-underline, h2-underline */
+        .remarkdown.h1-underline h1,
+        .remarkdown.h2-underline h2 {
+            display: table;
+            overflow: hidden;
+            position: relative;
+            padding-bottom: 1.5em;
+        }
+        .remarkdown.h1-underline h1::after {
+            content: "================================================================";
+            position: absolute;
+            bottom: 0; left: 0;
+            height: 1.5em; width: 100%;
+            overflow: hidden;
+            word-break: break-all;
+            cursor: default;
+        }
+        .remarkdown.h2-underline h2::after {
+            content: "----------------------------------------------------------------";
+            position: absolute;
+            bottom: 0; left: 0;
+            height: 1.5em; width: 100%;
+            overflow: hidden;
+            word-break: break-all;
+            cursor: default;
+        }
+
+        /* paragraphs, lists, etc. */
+        .remarkdown p { margin-top: 1.5em; margin-bottom: 1.5em; }
+        .remarkdown figure { margin: 1.5em 0; }
+        .remarkdown hr { height: 1.5em; line-height: 1.5em; margin: 1.5em 0; border: none; color: inherit; }
+        .remarkdown hr::before { content: "* * * *"; }
+
+        .remarkdown ul { margin: 1.5em 0 1.5em 4ch; padding: 0; list-style: none; }
+        .remarkdown li ul { margin-top: 0; margin-bottom: 0; }
+        .remarkdown ul > li::before { float: left; width: 1ch; margin-left: -4ch; margin-right: 1ch; content: "-"; }
+
+        .remarkdown ol { margin: 1.5em 0 1.5em 4ch; padding: 0; list-style: none; counter-reset: rmd-ol; }
+        .remarkdown li ol { margin-top: 0; margin-bottom: 0; }
+        .remarkdown ol > li { counter-increment: rmd-ol; }
+        .remarkdown ol > li::before { float: left; margin-left: -4ch; margin-right: 1ch; min-width: 2ch; content: counter(rmd-ol) "."; }
+
+        .remarkdown a::before { content: "["; }
+        .remarkdown a::after { content: "]"; }
+
+        .remarkdown em, .remarkdown strong { font-style: normal; font-weight: normal; }
+        .remarkdown em::before, .remarkdown em::after { content: "*"; }
+        .remarkdown strong::before, .remarkdown strong::after { content: "**"; }
+
+        .remarkdown code::before, .remarkdown code::after { content: "`"; }
+        .remarkdown pre code::before, .remarkdown pre code::after { display: none; }
+        .remarkdown pre { margin-top: 1.5em; margin-bottom: 1.5em; margin-left: 4ch; tab-size: 4; }
+
+        .remarkdown blockquote { margin: 1.5em 2ch; padding: 0; position: relative; }
+        .remarkdown blockquote::before {
+            position: absolute; top: 0; left: -2ch; bottom: 0; width: 1ch;
+            overflow: hidden; white-space: pre; cursor: default;
+            content: ">\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a>\a";
+        }
+        </style>
+
+        <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+        <link rel="icon" href="data:image/png;base64,iVBORw0KGgo=">
         $for(header-includes)$
         $header-includes$
         $endfor$
@@ -28,10 +167,11 @@
     <body class='remarkdown h1-underline h2-underline pre-tilde-full'>
 
         <nav>
-            <img src="assets/images/logo.svg"></img>
+            <svg xmlns="http://www.w3.org/2000/svg" id="svg60" width="143.225" height="96" font-family="Menlo, 'Lucida Console', monospace"> <style id="style1" type="text/css"> text{text-anchor:middle;font-family:"Menlo","Lucida Console","monospace";fill:#ffffff;font-size:1em} </style>
+                <g id="g60" transform="translate(-4.388 -15.875)"><text id="text2" x="88" y="20">▄</text><text id="text3" x="96" y="20">▄</text><text id="text4" x="88" y="36">█</text><text id="text5" x="96" y="36">█</text><text id="text6" x="8" y="52">█</text><text id="text7" x="16" y="52">█</text><text id="text8" x="24" y="52">▄</text><text id="text9" x="32" y="52">█</text><text id="text10" x="40" y="52">█</text><text id="text11" x="48" y="52">█</text><text id="text12" x="56" y="52">█</text><text id="text13" x="64" y="52">▄</text><text id="text14" x="88" y="52">█</text><text id="text15" x="96" y="52">█</text><text id="text16" x="104" y="52">▄</text><text id="text17" x="112" y="52">█</text><text id="text18" x="120" y="52">█</text><text id="text19" x="128" y="52">█</text><text id="text20" x="136" y="52">▄</text><text id="text21" x="8" y="68">█</text><text id="text22" x="16" y="68">█</text><text id="text23" x="24" y="68">▀</text><text id="text24" x="56" y="68">█</text><text id="text25" x="64" y="68">█</text><text id="text26" x="88" y="68">█</text><text id="text27" x="96" y="68">█</text><text id="text28" x="104" y="68">▀</text><text id="text29" x="128" y="68">▀</text><text id="text30" x="136" y="68">█</text><text id="text31" x="144" y="68">█</text><text id="text32" x="8" y="84">█</text><text id="text33" x="16" y="84">█</text><text id="text34" x="56" y="84">█</text><text id="text35" x="64" y="84">█</text><text id="text36" x="88" y="84">█</text><text id="text37" x="96" y="84">█</text><text id="text38" x="136" y="84">█</text><text id="text39" x="144" y="84">█</text><text id="text40" x="8" y="100">█</text><text id="text41" x="16" y="100">█</text><text id="text42" x="56" y="100">█</text><text id="text43" x="64" y="100">█</text><text id="text44" x="88" y="100">█</text><text id="text45" x="96" y="100">█</text><text id="text46" x="104" y="100">█</text><text id="text47" x="112" y="100">▄</text><text id="text48" x="120" y="100">▄</text><text id="text49" x="128" y="100">█</text><text id="text50" x="136" y="100">█</text><text id="text51" x="144" y="100">▀</text><text id="text52" x="8" y="116">▀</text><text id="text53" x="16" y="116">▀</text><text id="text54" x="56" y="116">▀</text><text id="text55" x="64" y="116">▀</text><text id="text56" x="88" y="116">▀</text><text id="text57" x="96" y="116">▀</text><text id="text58" x="112" y="116">▀</text><text id="text59" x="120" y="116">▀</text><text id="text60" x="128" y="116">▀</text></g></svg>
             <div class="nav-right">
-                <a href="work.html">Work</a>
-                <a href="work.html">Work</a>
+                <a href="tech.html">Tech</a>
+                <a href="Reseach.html">Research</a>
                 <a href="work.html">Work</a>
             </div>
         </nav>
