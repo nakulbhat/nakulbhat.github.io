@@ -3,31 +3,11 @@ title: Nakul Bhat's Homepage
 author: Nakul Bhat
 ---
 
-```
-        █     
- ▄ ▄▄   █▄▄▄  
- █▀  █  █▀ ▀█ 
- █   █  █   █ 
- █   █  ██▄█▀ 
-```
-
-```
-
-
-
-About
-=====
-```
+## About me
 Hello fellow straggler. I'm Nakul Bhat, a CS student at the Manipal Institute 
 of Technology. A researcher by trade and a open-source enthusiast, 
 
-```
-
-
-
-Updates
-=======
-```
+## Updates
 
 06/03/2026: I will be joining the GMM group at Intel for a year-long internship 
 from June 2026! Looking forward to meet my new colleagues!
@@ -101,3 +81,6 @@ nakulbhat034 [at] gmail [dot] com<br>
 [LinkedIn](https://linkedin.com/in/nakulbhat)<br>
 [Google Scholar](https://scholar.google.com/citations?user=iIjhA_AAAAAJ)
 
+```shell
+ls -l
+```

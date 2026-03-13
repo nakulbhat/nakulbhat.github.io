@@ -1,11 +1,9 @@
 name: Build and Deploy (Pandoc)
-
 on:
   push:
     branches:
       - main
   workflow_dispatch:
-
 jobs:
   deploy:
     runs-on: ubuntu-24.04
@@ -14,32 +12,43 @@ jobs:
     concurrency:
       group: pages-${{ github.ref }}
       cancel-in-progress: true
-
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Install Pandoc
         run: sudo apt-get update && sudo apt-get install -y pandoc
-
+      - name: Install html-minifier
+        run: npm install -g html-minifier clean-css-cli
       - name: Build HTML
         run: |
           mkdir public
-
-          # convert all .md files, preserve structure
           find . -type f -name "*.md" \
             -not -path "./.github/*" | while read file; do
-
             output="public/${file#./}"
             output="${output%.md}.html"
-
             mkdir -p "$(dirname "$output")"
-
             pandoc -s "$file" \
               --template=template.html \
               -o "$output"
           done
-
+      - name: Minify HTML
+        run: |
+          find public -type f -name "*.html" | while read file; do
+            html-minifier \
+              --collapse-whitespace \
+              --remove-comments \
+              --remove-optional-tags \
+              --remove-redundant-attributes \
+              --remove-script-type-attributes \
+              --minify-css true \
+              --minify-js true \
+              "$file" -o "$file"
+          done
+      - name: Minify CSS
+        run: |
+          cleancss -o public/assets/css/styles.css public/assets/css/styles.css
+      - name: Copy assets
+        run: cp -r assets public/assets
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:

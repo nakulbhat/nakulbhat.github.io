@@ -1,45 +1,42 @@
 <!doctype html>
 <html $if(lang)$ lang="$lang$" $endif$>
-<head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<meta name="generator" content="pandoc" />
-$for(author-meta)$
-<meta name="author" content="$author-meta$" />
-$endfor$
-$if(date-meta)$
-<meta name="date" content="$date-meta$" />
-$endif$
-<title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
-<style>
-body {
-  background: #000000;
-  color: #ffffff;
-  font-family: monospace;
-  line-height: 1.6;
-  max-width: 80ch;
-  margin: 40px auto;
-  padding: 0;
-}
-@media (max-width: 768px) {
-  body {
-    max-width: 80%;
-    margin: 40px auto;
-  }
-}
-a {
-  color: inherit;
-}
-code, pre {
-    line-height: 1.2;
-  white-space: pre;
-}
-</style>
-$for(header-includes)$
-$header-includes$
-$endfor$
-</head>
-<body>
-$body$
-</body>
+
+    <head>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="generator" content="pandoc" />
+
+        $for(author-meta)$
+        <meta name="author" content="$author-meta$" />
+        <link rel="stylesheet" href="assets/css/styles.css">
+        $endfor$
+
+        $if(date-meta)$
+        <meta name="date" content="$date-meta$" />
+        $endif$
+
+        <title>$if(title-prefix)$$title-prefix$ - $endif$$pagetitle$</title>
+        <link rel="icon" type="image/png" href="assets/images/logo-square.svg">
+
+        $for(header-includes)$
+        $header-includes$
+        $endfor$
+
+    </head>
+
+    <body class='remarkdown h1-underline h2-underline pre-tilde-full'>
+
+        <nav>
+            <img src="assets/images/logo.svg"></img>
+            <div class="nav-right">
+                <a href="work.html">Work</a>
+                <a href="work.html">Work</a>
+                <a href="work.html">Work</a>
+            </div>
+        </nav>
+        $body$
+
+    </body>
+
 </html>
